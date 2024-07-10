@@ -51,6 +51,6 @@ export default {
 		lawHead: 'Légal',
 		imprint: 'Mentions légales',
 		consent: 'Politique de confidentialité',
-	}
+	},
 
 };

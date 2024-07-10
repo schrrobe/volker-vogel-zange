@@ -52,5 +52,4 @@ export default {
 		imprint: 'Imprint',
 		consent: 'Privacy Policy',
 	},
-
 };
