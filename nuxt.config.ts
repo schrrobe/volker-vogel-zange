@@ -105,6 +105,8 @@ export default defineNuxtConfig({
 		},
 	},
 	image: {
+		provider: 'static', // Setze dies auf 'static', da Netlify ein statisches Hosting ist
+		domains: ['abriumbi.sirv.com'],
 		dir: 'assets/img',
 	},
 	eslint: {
