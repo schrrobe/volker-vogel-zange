@@ -58,6 +58,9 @@
 // 	},
 // });
 export default defineNuxtConfig({
+	target: 'static', // Deploy as a static site
+	ssr: false, // Disable Server-Side Rendering
+
 	devtools: { enabled: true }, // Enable devtools for debugging
 	modules: [
 		'@nuxtjs/i18n',
@@ -66,7 +69,7 @@ export default defineNuxtConfig({
 		'@nuxt/eslint',
 	],
 	css: [
-		'../assets/scss/styles.scss',
+		'~/assets/scss/styles.scss',
 	],
 	i18n: {
 		locales: [
@@ -81,11 +84,11 @@ export default defineNuxtConfig({
 			{ code: 'ja', iso: 'ja-JP', name: '日本語', file: 'ja-JP.js' },
 			{ code: 'ar', iso: 'ar-SA', name: 'العربية', file: 'ar-SA.js' },
 			{ code: 'nl', iso: 'nl-NL', name: 'Nederlands', file: 'nl-NL.js' },
-			{ code: 'ae', iso: 'ar-AE', name: 'العربية (UAE)', file: 'ar-AE.js' }, // Vereinigte Arabische Emirate
-			{ code: 'qa', iso: 'ar-QA', name: 'العربية (Qatar)', file: 'ar-QA.js' }, // Katar
-			{ code: 'ir', iso: 'fa-IR', name: 'فارسی (Iran)', file: 'fa-IR.js' }, // Iran
-			{ code: 'om', iso: 'ar-OM', name: 'العربية (Oman)', file: 'ar-OM.js' }, // Oman
-			{ code: 'bh', iso: 'ar-BH', name: 'العربية (Bahrain)', file: 'ar-BH.js' }, // Bahrain
+			{ code: 'ae', iso: 'ar-AE', name: 'العربية (UAE)', file: 'ar-AE.js' },
+			{ code: 'qa', iso: 'ar-QA', name: 'العربية (Qatar)', file: 'ar-QA.js' },
+			{ code: 'ir', iso: 'fa-IR', name: 'فارسی (Iran)', file: 'fa-IR.js' },
+			{ code: 'om', iso: 'ar-OM', name: 'العربية (Oman)', file: 'ar-OM.js' },
+			{ code: 'bh', iso: 'ar-BH', name: 'العربية (Bahrain)', file: 'ar-BH.js' },
 		],
 		lazy: true,
 		langDir: 'translations/',
