@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'Szczypce do zaciskania pierścieni adresowych',
+		shipping: 'plus wysyłka',
+		btnMail: 'Kontakt przez Email',
+		btnWhatsapp: 'Kontakt przez Whatsapp',
 		titleHighligted: 'Kvalitné kliešte na krúžkovanie',
 		title: 'pre sokoliarstvo a ornitologické krúžkovanie vtákov',
 		iconBoxTitle: 'Prečo sú naše kliešte najlepšou voľbou pre vaše potreby krúžkovania vtákov!',
@@ -27,5 +31,26 @@ export default {
 	seo: {
 		title: 'Kliešte na adresné krúžky',
 		description: 'Kliešte na krúžkovanie vtákov: Ideálne pre adresné krúžky s priemerom od Ø 15 mm do Ø 30 mm. Ručne vyrobené, presné a robustné, ideálne pre sokoliarstvo a ornitológiu.',
-	}
+	},
+	impressum: {
+		header: 'Impressum',
+		subHeader: 'Informácie podľa § 5 TMG',
+		name: 'Volker Jüngling',
+		street: 'Vormbrockweg 1c',
+		plz: '44149 Dortmund',
+		tel: 'Tel.:',
+		mobil: 'Mobil:',
+		mail: 'E-mail:',
+		contact: 'Kontakt',
+		contactPerson: 'Kontaktná osoba:',
+		consumerPoint: 'Riešenie spotrebiteľských sporov / Univerzálna arbitrážna rada',
+		consumerPointText: 'Nie sme ochotní ani povinní zúčastňovať sa na riešení sporov pred spotrebiteľskou arbitrážnou radou.',
+		src: 'Zdroj:',
+	},
+	lawMenu: {
+		lawHead: 'Právne',
+		imprint: 'Odtlačok',
+		consent: 'Zásady ochrany osobných údajov',
+	},
+
 };

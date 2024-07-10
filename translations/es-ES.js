@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'Alicates de Crimpado para Anillos de Dirección',
+		shipping: 'más envío',
+		btnMail: 'Contactar por Email',
+		btnWhatsapp: 'Contactar por Whatsapp',
 		titleHighligted: 'Alicates de anillado de alta calidad',
 		title: 'para cetrería y anillamiento ornitológico de aves',
 		iconBoxTitle: '¡Por qué nuestros alicates son la mejor opción para sus necesidades de anillamiento de aves!',
@@ -27,5 +31,26 @@ export default {
 	seo: {
 		title: 'Alicates de anillamiento para anillos de dirección',
 		description: 'Alicates de anillamiento de aves: Ideales para anillos de dirección de Ø 15mm a Ø 30mm. Artesanales, precisos y robustos, perfectos para cetrería y ornitología.',
-	}
+	},
+	impressum: {
+		header: 'Impressum',
+		subHeader: 'Indicación según § 5 TMG',
+		name: 'Volker Jüngling',
+		street: 'Vormbrockweg 1c',
+		plz: '44149 Dortmund',
+		tel: 'Tel.:',
+		mobil: 'Móvil:',
+		mail: 'Correo:',
+		contact: 'Contacto',
+		contactPerson: 'Persona de contacto:',
+		consumerPoint: 'Resolución de disputas del consumidor / Centro de arbitraje universal',
+		consumerPointText: 'No estamos dispuestos ni obligados a participar en procedimientos de resolución de disputas ante una junta de arbitraje de consumo.',
+		src: 'Fuente:',
+	},
+	lawMenu: {
+		lawHead: 'Legal',
+		imprint: 'Aviso legal',
+		consent: 'Política de privacidad',
+	},
+
 };

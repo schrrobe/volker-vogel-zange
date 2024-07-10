@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'Szczypce do zaciskania pierścieni adresowych',
+		shipping: 'plus wysyłka',
+		btnMail: 'Kontakt przez Email',
+		btnWhatsapp: 'Kontakt przez Whatsapp',
 		titleHighligted: 'Высококачественные клещи для кольцевания',
 		title: 'для соколиной охоты и орнитологического кольцевания птиц',
 		iconBoxTitle: 'Почему наши клещи - лучший выбор для ваших нужд по кольцеванию птиц!',
@@ -27,5 +31,5 @@ export default {
 	seo: {
 		title: 'Клещи для адресных колец',
 		description: 'Клещи для кольцевания птиц: Идеально для адресных колец диаметром от Ø 15 мм до Ø 30 мм. Ручная работа, точность и прочность, идеальны для соколиной охоты и орнитологии.',
-	}
+	},
 };

@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'アドレスリング用圧着プライヤー',
+		shipping: '送料別途',
+		btnMail: 'メールで連絡',
+		btnWhatsapp: 'WhatsAppで連絡',
 		titleHighligted: '高品質なバンディングプライヤー',
 		title: '鷹狩りと鳥類学のための鳥のバンディング',
 		iconBoxTitle: 'なぜ私たちのプライヤーが鳥のバンディングに最適なのか！',
@@ -27,5 +31,5 @@ export default {
 	seo: {
 		title: 'アドレスリング用バンディングプライヤー',
 		description: '鳥のバンディングプライヤー：Ø 15mmからØ 30mmまでのアドレスリングに最適。手作り、精密で頑丈、鷹狩りと鳥類学に最適。',
-	}
+	},
 };

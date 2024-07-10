@@ -1,67 +1,87 @@
 <template>
-  <div class="row items-center show-desktop">
-    <div class="col-7">
-      <h2>Beringungszange für Adressringe</h2>
-      <div class="text-right q-pr-xl q-mb-xl">
-          <span class="price-old q-mr-md">
-             <span v-if="isDollar">$</span> 199 <span v-if="!isDollar">€</span>
-          </span>
-        <span class="price">
-            <span v-if="isDollar">$</span> 130 <span v-if="!isDollar">€</span>
-          </span>
-        <span class="q-ml-md">zzgl. Versand</span>
-      </div>
-      <div class="row justify-between q-mt-lg q-pl-md">
-        <div class="col-6">
-          <q-btn class="q-mr-md" color="primary" label="Kontakt per Email" />
-        </div>
-        <div class="col-6">
-          <q-btn color="black" href="https://wa.me/4915128803091" label="Kontakt per Whatsapp " />
-        </div>
-      </div>
+	<div class="row items-center show-desktop">
+		<div class="col-7">
+			<h2>{{ t('homeView.headerTong') }}</h2>
+			<div class="text-right q-pr-xl q-mb-xl">
+				<span class="price-old q-mr-md">
+					<span v-if="isDollar">$</span> 199 <span v-if="!isDollar">€</span>
+				</span>
+				<span class="price">
+					<span v-if="isDollar">$</span> 130 <span v-if="!isDollar">€</span>
+				</span>
+				<span class="q-ml-md">{{ t('homeView.shipping') }}</span>
+			</div>
+			<div class="row justify-between q-mt-lg q-pl-md">
+				<div class="col-6">
+					<q-btn
+						class="q-mr-md"
+						color="primary"
+						:label="t('homeView.btnMail')"
+						href="mailto:v.juengling@-t-online.de"
+					/>
+				</div>
+				<div class="col-6">
+					<q-btn
+						color="black"
+						href="https://wa.me/4915128803091"
+						:label="t('homeView.btnWhatsapp')"
+					/>
+				</div>
+			</div>
+		</div>
+		<div
+			class="col-5"
+			style="margin: auto"
+		>
+			<NuxtImg
+				src="Beringungszange.png"
+				width="433px"
+			/>
+		</div>
+	</div>
 
-    </div>
-    <div class="col-5" style="margin: auto">
-      <NuxtImg src="Beringungszange.png" width="433px" />
-    </div>
-
-  </div>
-
-  <section class="section-a show-mobile">
-    <div>
-      <div>
-        <h2>Berringungszange für Adressringe</h2>
-        <div class="row justify-center">
-          <NuxtImg src="Beringungszange.png" />
-        </div>
-        <div class="row justify-center">
-          <span class="price-old q-mr-md q-mt-md">
-             <span v-if="isDollar">$</span> 199 <span v-if="!isDollar">€</span>
-          </span>
-          <span class="price">
-            <span v-if="isDollar">$</span> 130 <span v-if="!isDollar">€</span>
-          </span>
-        </div>
-        <div class="row justify-around q-mt-lg">
-          <div class="col-5">
-            <q-btn class="q-mr-md" color="primary" label="Kontakt per Email" />
-          </div>
-          <div class="col-5">
-            <q-btn color="black" href="https://wa.me/4915128803091" label="Kontakt per Whatsapp " />
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+	<section class="section-a show-mobile">
+		<div>
+			<div>
+				<h2>Beringungszange für Adressringe</h2>
+				<div class="row justify-center">
+					<NuxtImg src="Beringungszange.png" />
+				</div>
+				<div class="row justify-center">
+					<span class="price-old q-mr-md q-mt-md">
+						<span v-if="isDollar">$</span> 199 <span v-if="!isDollar">€</span>
+					</span>
+					<span class="price">
+						<span v-if="isDollar">$</span> 130 <span v-if="!isDollar">€</span>
+					</span>
+				</div>
+				<div class="row justify-around q-mt-lg">
+					<div class="col-5">
+						<q-btn
+							class="q-mr-md"
+							color="primary"
+							label="Kontakt per Email"
+							href="mailto:v.juengling@-t-online.de"
+						/>
+					</div>
+					<div class="col-5">
+						<q-btn
+							color="black"
+							href="https://wa.me/4915128803091"
+							label="Kontakt per Whatsapp "
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
-const isDollar = ['ar','ae','qa','ir','om','bh','ar','ja','ru','en'].includes(t.value)
-
+const isDollar = ['ar', 'ae', 'qa', 'ir', 'om', 'bh', 'ar', 'ja', 'ru', 'en'].includes(t.value);
 </script>
 
 <style scoped lang="scss">
@@ -113,5 +133,4 @@ const isDollar = ['ar','ae','qa','ir','om','bh','ar','ja','ru','en'].includes(t.
     transform: rotate(-13deg) translateY(calc(50% - #{$lineThroughWidth}));
   }
 }
-
 </style>

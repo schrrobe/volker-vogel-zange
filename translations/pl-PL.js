@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'Szczypce do zaciskania pierścieni adresowych',
+		shipping: 'plus wysyłka',
+		btnMail: 'Kontakt przez Email',
+		btnWhatsapp: 'Kontakt przez Whatsapp',
 		titleHighligted: 'Wysokiej jakości szczypce do obrączkowania',
 		title: 'do sokolnictwa i ornitologicznego obrączkowania ptaków',
 		iconBoxTitle: 'Dlaczego nasze szczypce są najlepszym wyborem do obrączkowania ptaków!',
@@ -27,5 +31,26 @@ export default {
 	seo: {
 		title: 'Szczypce do obrączek adresowych',
 		description: 'Szczypce do obrączkowania ptaków: Idealne do obrączek adresowych od Ø 15mm do Ø 30mm. Ręcznie wykonane, precyzyjne i solidne, idealne do sokolnictwa i ornitologii.',
-	}
+	},
+	impressum: {
+		header: 'Impressum',
+		subHeader: 'Informacje zgodnie z § 5 TMG',
+		name: 'Volker Jüngling',
+		street: 'Vormbrockweg 1c',
+		plz: '44149 Dortmund',
+		tel: 'Tel.:',
+		mobil: 'Telefon komórkowy:',
+		mail: 'E-mail:',
+		contact: 'Kontakt',
+		contactPerson: 'Osoba kontaktowa:',
+		consumerPoint: 'Rozstrzyganie sporów konsumenckich / Uniwersalna izba arbitrażowa',
+		consumerPointText: 'Nie jesteśmy skłonni ani zobowiązani do udziału w postępowaniach rozstrzygających spory przed konsumencką izbą arbitrażową.',
+		src: 'Źródło:',
+	},
+	lawMenu: {
+		lawHead: 'Prawne',
+		imprint: 'Oświadczenie prawne',
+		consent: 'Polityka prywatności',
+	},
+
 };

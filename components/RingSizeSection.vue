@@ -25,11 +25,19 @@
 				</p>
 			</div>
 			<div class="flexbox-item image">
-				<NuxtImg src="1.jpg" width="90%" height="400" />
+				<NuxtImg
+					src="1.jpg"
+					width="90%"
+					height="400"
+				/>
 			</div>
-      <div class="flexbox-item image" >
-        <NuxtImg src="2.jpg" width="90%" height="400" />
-      </div>
+			<div class="flexbox-item image">
+				<NuxtImg
+					src="2.jpg"
+					width="90%"
+					height="400"
+				/>
+			</div>
 			<div class="flexbox-item q-pl-md ">
 				<div class="row items-center q-pr-xl ">
 					<div class="col-xs-1">
@@ -74,12 +82,20 @@
 					{{ $t('homeView.easyHandlingText') }}
 				</p>
 			</div>
-      <div class="flexbox-item image3" >
-        <NuxtImg src="3.jpg" width="90%" height="400" />
-      </div>
-      <div class="flexbox-item image4">
-        <NuxtImg src="4.jpg" width="90%" height="400" />
-      </div>
+			<div class="flexbox-item image3">
+				<NuxtImg
+					src="3.jpg"
+					width="90%"
+					height="400"
+				/>
+			</div>
+			<div class="flexbox-item image4">
+				<NuxtImg
+					src="4.jpg"
+					width="90%"
+					height="400"
+				/>
+			</div>
 			<div class="flexbox-item q-pl-md">
 				<div class="row items-center q-pr-xl q-mt-xl">
 					<div class="col-xs-1">
@@ -248,7 +264,7 @@
 }
 
 .image{
-    width: 50%;
+    width: 100%;
 }
 .margin-left-icon{
     margin-left: 5px;

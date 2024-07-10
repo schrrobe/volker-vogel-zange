@@ -1,64 +1,104 @@
 <template>
-  <div class="footer-section bg-primary" >
-    <ContentLayout>
-      <ContentSection>
-        <div class="row">
-          <div class="col-xs-12 col-md-3 q-pa-md">
-
-          </div>
-
-        </div>
-        <div class="col-xs-12 col-md-12 q-pa-md">
-        </div>
-      </ContentSection>
-      <div class="row text-center">
-        <ul class="inline-list">
-          <li v-for="lang in langs" :key="lang.locale" >
-            <NuxtLink :to="switchLocalePath(lang.locale)">{{ lang.text }}</NuxtLink>
-            <span class="seperator">|</span>
-          </li>
-        </ul>
-      </div>
-    </ContentLayout>
-  </div>
+	<div class="footer-section bg-primary">
+		<ContentLayout>
+			<ContentSection>
+				<div class="row">
+					<div
+						v-if="isEurope"
+						class="col-xs-12 col-md-6 q-pa-md"
+					>
+						<p class="text-white law-menu-header">
+							<strong>{{ t('lawMenu.lawHead') }}</strong>
+						</p>
+						<ul class="law-menu">
+							<li class="law-menu">
+								<router-link
+									class="text-white"
+									:to="`/${locale}/impressum`"
+								>
+									{{ t('lawMenu.imprint') }}
+								</router-link>
+							</li>
+							<li class="law-menu">
+								<router-link
+									class="text-white"
+									:to="`/${locale}/dsgvo`"
+								>
+									{{ t('lawMenu.consent') }}
+								</router-link>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-md-6 q-pa-md">
+						<p class="text-white law-menu-header">
+							<strong>{{ t('impressum.contact') }}</strong>
+						</p>
+						<ul class="law-menu">
+							<li class="law-menu">
+								<q-icon
+									name="phone"
+									color="white"
+									class="q-mr-xs"
+								/><span class="text-white">+49 (0) 151 - 28803091</span>
+							</li>
+							<li class="law-menu">
+								<q-icon
+									name="mail"
+									color="white"
+									class="q-mr-xs"
+								/><span class="text-white">v.juengling@-t-online.de</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</ContentSection>
+			<div class="row text-center">
+				<ul class="inline-list">
+					<li
+						v-for="lang in langs"
+						:key="lang.locale"
+					>
+						<NuxtLink :to="switchLocalePath(lang.locale)">
+							{{ lang.text }}
+						</NuxtLink>
+						<span class="seperator">|</span>
+					</li>
+				</ul>
+			</div>
+		</ContentLayout>
+	</div>
 </template>
 
-<script>
-import { defineComponent, ref } from 'vue';
+<script setup>
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import ContentLayout from '../components/ContentLayout.vue';
 import ContentSection from '../components/ContentSection.vue';
 
-export default defineComponent({
-  name: 'FooterSection',
-  components: {
-    ContentLayout,
-    ContentSection,
-  },
-  setup() {
-    const langs = ref([
-      { locale: 'en', text: 'English (US)' },
-      { locale: 'gb', text: 'English (UK)' },
-      { locale: 'de', text: 'Deutsch' },
-      { locale: 'es', text: 'Español' },
-      { locale: 'fr', text: 'Français' },
-      { locale: 'ru', text: 'Русский' },
-      { locale: 'pl', text: 'Polski' },
-      { locale: 'sk', text: 'Slovenský' },
-      { locale: 'ja', text: '日本語' },
-      { locale: 'ar', text: 'العربية' },
-      { locale: 'nl', text: 'Nederlands' },
-      { locale: 'ae', text: 'العربية (UAE)' },
-      { locale: 'qa', text: 'العربية (Qatar)' },
-      { locale: 'ir', text: 'فارسی (Iran)' },
-      { locale: 'om', text: 'العربية (Oman)' },
-      { locale: 'bh', text: 'العربية (Bahrain)' },
-    ]);
+const { locale, t } = useI18n();
 
-    return {
-      langs
-    };
-  },
+const isEurope = computed(() => {
+	return ['en', 'gb', 'es', 'fr', 'pl', 'sk', 'nl', 'de'].includes(locale.value);
 });
+
+const langs = ref([
+	{ locale: 'en', text: 'English (US)' },
+	{ locale: 'gb', text: 'English (UK)' },
+	{ locale: 'de', text: 'Deutsch' },
+	{ locale: 'es', text: 'Español' },
+	{ locale: 'fr', text: 'Français' },
+	{ locale: 'ru', text: 'Русский' },
+	{ locale: 'pl', text: 'Polski' },
+	{ locale: 'sk', text: 'Slovenský' },
+	{ locale: 'ja', text: '日本語' },
+	{ locale: 'ar', text: 'العربية' },
+	{ locale: 'nl', text: 'Nederlands' },
+	{ locale: 'ae', text: 'العربية (UAE)' },
+	{ locale: 'qa', text: 'العربية (Qatar)' },
+	{ locale: 'ir', text: 'فارسی (Iran)' },
+	{ locale: 'om', text: 'العربية (Oman)' },
+	{ locale: 'bh', text: 'العربية (Bahrain)' },
+]);
 </script>
 
 <style lang="scss" scoped>
@@ -91,4 +131,12 @@ ul.inline-list li:last-child .seperator {
   display: none;
 }
 
+.law-menu{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.law-menu-header {
+  margin: 0;
+}
 </style>

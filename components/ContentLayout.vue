@@ -7,23 +7,11 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
 	name: 'ContentLayout',
 });
-// const props = defineProps({
-//   fullHeight: {
-//     type: Boolean,
-//     default: false
-//   }
-// })
-
-// const classes = computed(() => {
-// return {
-//   'full-height': fullHeight,
-// };
-// });
 </script>
 
 <style lang="scss">

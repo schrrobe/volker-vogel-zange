@@ -1,7 +1,7 @@
 <template>
 	<q-carousel
 		v-model="slide"
-    v-touch:pan.prevent="preventScroll"
+		v-touch:pan.prevent="preventScroll"
 		class="carousel"
 		style="height: 70vh;"
 		animated
@@ -10,8 +10,9 @@
 		infinite
 	>
 		<q-carousel-slide
+			style="overflow-y: hidden!important;"
 			:name="1"
-      :img-src="imageSrc"
+			:img-src="imageSrc"
 		>
 			<content-layout full-height>
 				<content-section full-height>
@@ -40,56 +41,53 @@
 </template>
 
 <script>
-import { defineComponent, ref, onBeforeUnmount , computed, onMounted, onUnmounted } from 'vue';
-import ContentLayout from '../components/ContentLayout.vue';
-import ContentSection from '../components/ContentSection.vue';
+import { defineComponent, ref, onBeforeUnmount, computed, onMounted, onUnmounted } from 'vue';
 
 export default defineComponent({
-  name: 'HomeSlider',
-  setup() {
-    const windowWidth = ref(0);
-    const carousel = ref(null);
+	name: 'HomeSlider',
+	setup() {
+		const windowWidth = ref(0);
+		const carousel = ref(null);
 
-    const imageSrc = computed(() => {
-      return windowWidth.value < 1024 
-        ? 'https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp'
-        : 'https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp';
-    });
+		const imageSrc = computed(() => {
+			return windowWidth.value < 1024
+				? 'https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp'
+				: 'https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp';
+		});
 
-    const updateWindowWidth = () => {
-      windowWidth.value = window.innerWidth;
-    };
+		const updateWindowWidth = () => {
+			windowWidth.value = window.innerWidth;
+		};
 
-    const preventScroll = (event) => {
-      event.preventDefault();
-    };
+		const preventScroll = (event) => {
+			event.preventDefault();
+		};
 
-    onMounted(() => {
-      updateWindowWidth(); // Initial setting of window width
-      window.addEventListener('resize', updateWindowWidth);
-      if (carousel.value) {
-        carousel.value.$el.addEventListener('wheel', preventScroll, { passive: false });
-      }
-    });
+		onMounted(() => {
+			updateWindowWidth(); // Initial setting of window width
+			window.addEventListener('resize', updateWindowWidth);
+			if (carousel.value) {
+				carousel.value.$el.addEventListener('wheel', preventScroll, { passive: false });
+			}
+		});
 
-    onBeforeUnmount(() => {
-      if (carousel.value) {
-        carousel.value.$el.removeEventListener('wheel', preventScroll);
-      }
-    });
+		onBeforeUnmount(() => {
+			if (carousel.value) {
+				carousel.value.$el.removeEventListener('wheel', preventScroll);
+			}
+		});
 
-    onUnmounted(() => {
-      window.removeEventListener('resize', updateWindowWidth);
-    });
+		onUnmounted(() => {
+			window.removeEventListener('resize', updateWindowWidth);
+		});
 
-    return {
-      slide: ref(1),
-      imageSrc
-    };
-  },
+		return {
+			slide: ref(1),
+			imageSrc,
+		};
+	},
 });
 </script>
-
 
 <style lang="scss">
 @import '../assets/scss/main.scss';
@@ -120,7 +118,6 @@ export default defineComponent({
   border-bottom: 120vw solid rgba(255, 255, 255, 0.7);
   background-image: url('https://cdn.quasar.dev/img/mountains.jpg');
   background-repeat: no-repeat;
-  // backdrop-filter: blur(7.1px);
 }
 
 .glass-bg{

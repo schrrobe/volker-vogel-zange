@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'Pince à sertir pour anneaux d\'adresse',
+		shipping: 'plus frais de port',
+		btnMail: 'Contact par Email',
+		btnWhatsapp: 'Contact par WhatsApp',
 		titleHighligted: 'Pinces de baguage de haute qualité',
 		title: 'pour la fauconnerie et le baguage ornithologique des oiseaux',
 		iconBoxTitle: 'Pourquoi nos pinces sont le meilleur choix pour vos besoins de baguage d\'oiseaux !',
@@ -27,5 +31,26 @@ export default {
 	seo: {
 		title: 'Pinces de baguage pour anneaux d\'adresse',
 		description: 'Pinces de baguage des oiseaux : Idéales pour les anneaux d\'adresse de Ø 15mm à Ø 30mm. Artisanales, précises et robustes, parfaites pour la fauconnerie et l\'ornithologie.',
+	},
+	impressum: {
+		header: 'Impressum',
+		subHeader: 'Conformément au § 5 TMG',
+		name: 'Volker Jüngling',
+		street: 'Vormbrockweg 1c',
+		plz: '44149 Dortmund',
+		tel: 'Tel.:',
+		mobil: 'Portable:',
+		mail: 'Courriel:',
+		contact: 'Contact',
+		contactPerson: 'Personne de contact:',
+		consumerPoint: 'Résolution des litiges de consommation / Centre d\'arbitrage universel',
+		consumerPointText: 'Nous ne sommes pas disposés ni obligés à participer à des procédures de résolution des litiges devant un conseil d\'arbitrage de consommation.',
+		src: 'Source:',
+	},
+	lawMenu: {
+		lawHead: 'Légal',
+		imprint: 'Mentions légales',
+		consent: 'Politique de confidentialité',
 	}
+
 };

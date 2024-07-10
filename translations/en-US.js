@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'Crimping Pliers for Address Rings',
+		shipping: 'plus shipping',
+		btnMail: 'Contact via Email',
+		btnWhatsapp: 'Contact via WhatsApp',
 		titleHighligted: 'High-Quality Banding Pliers',
 		title: 'for falconry and ornithological bird banding',
 		iconBoxTitle: 'Why our pliers are the best choice for your bird banding needs!',
@@ -27,5 +31,25 @@ export default {
 	seo: {
 		title: 'Banding Pliers for Address Rings',
 		description: 'Bird banding pliers: Ideal for address rings from Ø 15mm to Ø 30mm. Handcrafted, precise, and robust, perfect for falconry and ornithology.',
-	}
+	},
+	impressum: {
+		header: 'Impressum',
+		subHeader: 'Information according to § 5 TMG',
+		name: 'Volker Jüngling',
+		street: 'Vormbrockweg 1c',
+		plz: '44149 Dortmund',
+		tel: 'Tel.:',
+		mobil: 'Mobile:',
+		mail: 'Email:',
+		contact: 'Contact',
+		contactPerson: 'Contact person:',
+		consumerPoint: 'Consumer dispute resolution / Universal arbitration board',
+		consumerPointText: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
+		src: 'Source:',
+	},
+	lawMenu: {
+		lawHead: 'Legal',
+		imprint: 'Imprint',
+		consent: 'Privacy Policy',
+	},
 };

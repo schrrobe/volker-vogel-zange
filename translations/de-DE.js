@@ -1,5 +1,9 @@
 export default {
 	homeView: {
+		headerTong: 'Beringungszange für Adressringe',
+		shipping: 'zzgl. Versand',
+		btnMail: 'Kontakt per Email',
+		btnWhatsapp: 'Kontakt per Whatsapp',
 		titleHighligted: 'Hochwertige Beringungszangen',
 		title: 'für die Falknerei und ornithologische Vogelberingung',
 		iconBoxTitle: 'Warum unsere Zange die beste Wahl für Ihre Vogelberingung ist!',
@@ -28,5 +32,25 @@ export default {
 		title: 'Beringungszange für Adressringe',
 		description: 'Vogelberingungszange: Ideal für Adressringe von Ø 15mm bis Ø 30mm. Handgefertigt, präzise und robust, perfekt für Falknerei und Ornithologie.',
 
-	}
+	},
+	impressum: {
+		header: 'Impressum',
+		subHeader: 'Angaben gemäß § 5 TMG',
+		name: 'Volker Jüngling',
+		street: 'Vormbrockweg 1c',
+		plz: '44149 Dortmund',
+		tel: 'Tel.:',
+		mobil: 'Mobil:',
+		mail: 'Mail:',
+		contact: 'Kontakt',
+		contactPerson: 'Ansprechpartner:',
+		consumerPoint: 'Verbraucher­streit­beilegung/Universal­schlichtungs­stelle',
+		consumerPointText: 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+		src: 'Quelle:',
+	},
+	lawMenu: {
+		lawHead: 'Rechtliches',
+		imprint: 'Impressum',
+		consent: 'Datenschutzerklärung',
+	},
 };
