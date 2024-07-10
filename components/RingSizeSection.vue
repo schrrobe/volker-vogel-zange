@@ -26,14 +26,14 @@
 			</div>
 			<div class="flexbox-item image">
 				<NuxtImg
-					src="1.jpg"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/1.jpg"
 					width="90%"
 					height="400"
 				/>
 			</div>
 			<div class="flexbox-item image">
 				<NuxtImg
-					src="2.jpg"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/2.jpg"
 					width="90%"
 					height="400"
 				/>
@@ -84,14 +84,14 @@
 			</div>
 			<div class="flexbox-item image3">
 				<NuxtImg
-					src="3.jpg"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/3.jpg"
 					width="90%"
 					height="400"
 				/>
 			</div>
 			<div class="flexbox-item image4">
 				<NuxtImg
-					src="4.jpg"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/4.jpg"
 					width="90%"
 					height="400"
 				/>
@@ -144,7 +144,7 @@
 			<div class="flexbox-item image1 mt-space-2 mb-space-2">
 				<NuxtImg
 					class="image"
-					src="entenberingung-m.jpeg"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/entenberingung-m.jpeg"
 				/>
 			</div>
 			<div class="flexbox-item q-pa-xs mt-space-2 mb-space-2">
@@ -171,7 +171,7 @@
 			<div class="flexbox-item image2 mt-space-2 mb-space-2">
 				<NuxtImg
 					class="image"
-					src="vogelringzange.jpeg"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/vogelringzange.jpeg"
 				/>
 			</div>
 			<div class="flexbox-item q-pa-xs">
@@ -199,7 +199,7 @@
 			<div class="flexbox-item image3 mt-space-2 mb-space-2">
 				<NuxtImg
 					class="image"
-					src="greifvogelberingung-m.jpeg"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/greifvogelberingung-m.jpeg"
 				/>
 			</div>
 			<div class="flexbox-item image4 mt-space-2 mb-space-2" />
@@ -224,6 +224,12 @@
 					{{ $t('homeView.qualityText') }}
 				</p>
 			</div>
+      <div class="flexbox-item image3 mt-space-2 mb-space-2">
+        <NuxtImg
+            class="image"
+            src="https://abriumbi.sirv.com/volker-vogelringzange/g2.jpg"
+        />
+      </div>
 		</div>
 	</div>
 </template>

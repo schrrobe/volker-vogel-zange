@@ -34,7 +34,7 @@
 			style="margin: auto"
 		>
 			<NuxtImg
-				src="Beringungszange.png"
+				src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png"
 				width="433px"
 			/>
 		</div>
@@ -45,7 +45,7 @@
 			<div>
 				<h2>Beringungszange für Adressringe</h2>
 				<div class="row justify-center">
-					<NuxtImg src="Beringungszange.png" />
+					<NuxtImg src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png" />
 				</div>
 				<div class="row justify-center">
 					<span class="price-old q-mr-md q-mt-md">
