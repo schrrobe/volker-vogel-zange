@@ -58,7 +58,6 @@
 // 	},
 // });
 export default defineNuxtConfig({
-	ssr: true,
 	devtools: { enabled: true }, // Enable devtools for debugging
 	modules: [
 		'@nuxtjs/i18n',
