@@ -1,5 +1,5 @@
 <template>
-	<section class="window-width">
+	<section style="overflow-x: hidden;">
 		<div class="row justify-center">
 			<div
 				v-for="img in images"
@@ -55,6 +55,4 @@ const images = [
 
 <style scoped lang="scss">
 @import '../assets/scss/styles.scss';
-.width{
-}
 </style>
