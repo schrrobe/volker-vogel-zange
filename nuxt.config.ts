@@ -65,7 +65,6 @@ export default defineNuxtConfig({
 		'nuxt-quasar-ui',
 		'@nuxt/image',
 		'@nuxt/eslint',
-		'@dargmuesli/nuxt-cookie-control',
 	],
 	css: [
 		'../assets/scss/styles.scss',
