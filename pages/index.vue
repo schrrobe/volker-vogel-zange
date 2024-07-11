@@ -1,28 +1,27 @@
 <template>
-	<!-- <div class="q-pa-md"></div> -->
 	<div>
-		<home-slider />
-		<content-layout>
-			<content-section>
-				<price-section />
-			</content-section>
-		</content-layout>
-		<content-layout>
-			<content-section>
-				<home-welcome />
-			</content-section>
-		</content-layout>
-		<content-layout class="bg-primary">
-			<content-section>
-				<ring-size-section />
-			</content-section>
-		</content-layout>
-		<content-layout>
-			<content-section>
-				<more-benefits />
-			</content-section>
-		</content-layout>
-		<FotoGallery />
+<!--				<home-slider />-->
+				<content-layout>
+					<content-section>
+						<price-section />
+					</content-section>
+				</content-layout>
+				<content-layout>
+					<content-section>
+						<home-welcome />
+					</content-section>
+				</content-layout>
+				<content-layout class="bg-primary">
+					<content-section>
+						<ring-size-section />
+					</content-section>
+				</content-layout>
+				<content-layout>
+					<content-section>
+						<more-benefits />
+					</content-section>
+				</content-layout>
+				<FotoGallery />
 	</div>
 </template>
 
@@ -35,7 +34,6 @@ export default defineComponent({
 		return {
 			slide: ref(1),
 		};
-		// Setup-Logik hier
 	},
 });
 </script>

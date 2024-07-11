@@ -58,19 +58,30 @@
 // 	},
 // });
 export default defineNuxtConfig({
-	target: 'static', // Deploy as a static site
-	ssr: false, // Disable Server-Side Rendering
+	target: 'static',
+	ssr: true,
+	devtools: { enabled: true },
 
-	devtools: { enabled: true }, // Enable devtools for debugging
 	modules: [
 		'@nuxtjs/i18n',
 		'nuxt-quasar-ui',
 		'@nuxt/image',
 		'@nuxt/eslint',
 	],
+	// router: {
+	// 	extendRoutes(routes, resolve) {
+	// 		routes.push(
+	// 			{ path: '/en/impressum', component: resolve(__dirname, 'pages/en/impressum.vue') },
+	// 			{ path: '/de/impressum', component: resolve(__dirname, 'pages/de/impressum.vue') },
+	// 			{ path: '/en/dsgvo', component: resolve(__dirname, 'pages/en/dsgvo.vue') },
+	// 			// Weitere Sprachen hier hinzufügen, falls erforderlich
+	// 		);
+	// 	}
+	// },
 	css: [
 		'~/assets/scss/styles.scss',
 	],
+
 	i18n: {
 		locales: [
 			{ code: 'en', iso: 'en-US', name: 'English (US)', file: 'en-US.js' },
@@ -104,10 +115,12 @@ export default defineNuxtConfig({
 			localeDetector: './translations/localeDetector.ts',
 		},
 	},
+
 	image: {
-		dir: 'assets/img',
+		// dir: 'assets/img',
 		domains: ['abriumbi.sirv.com'],
 	},
+
 	eslint: {
 		config: {
 			stylistic: {
@@ -116,4 +129,12 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+	nitro: {
+		// baseURL: "http://localhost:8000",
+		prerender: {
+			// crawlLinks: true,
+			failOnError: false,
+		},
+	},
+	compatibilityDate: '2024-07-11',
 });

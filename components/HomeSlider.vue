@@ -1,7 +1,6 @@
 <template>
 	<q-carousel
 		v-model="slide"
-		v-touch:pan.prevent="preventScroll"
 		class="carousel"
 		style="height: 70vh;"
 		animated
@@ -41,14 +40,15 @@
 </template>
 
 <script>
-import { defineComponent, ref, onBeforeUnmount, computed, onMounted, onUnmounted } from 'vue';
+import { defineComponent, ref, computed, onMounted, onBeforeUnmount } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
 	name: 'HomeSlider',
 	setup() {
+		const { t } = useI18n();
 		const windowWidth = ref(0);
-		const carousel = ref(null);
-
+		const slide = ref(1);
 		const imageSrc = computed(() => {
 			return windowWidth.value < 1024
 				? 'https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp'
@@ -56,7 +56,9 @@ export default defineComponent({
 		});
 
 		const updateWindowWidth = () => {
-			windowWidth.value = window.innerWidth;
+			if (typeof window !== 'undefined') {
+				windowWidth.value = window.innerWidth;
+			}
 		};
 
 		const preventScroll = (event) => {
@@ -65,25 +67,23 @@ export default defineComponent({
 
 		onMounted(() => {
 			updateWindowWidth(); // Initial setting of window width
-			window.addEventListener('resize', updateWindowWidth);
-			if (carousel.value) {
-				carousel.value.$el.addEventListener('wheel', preventScroll, { passive: false });
+			if (typeof window !== 'undefined') {
+				window.addEventListener('resize', updateWindowWidth);
+				document.addEventListener('wheel', preventScroll, { passive: false });
 			}
 		});
 
 		onBeforeUnmount(() => {
-			if (carousel.value) {
-				carousel.value.$el.removeEventListener('wheel', preventScroll);
+			if (typeof window !== 'undefined') {
+				window.removeEventListener('resize', updateWindowWidth);
+				document.removeEventListener('wheel', preventScroll);
 			}
 		});
 
-		onUnmounted(() => {
-			window.removeEventListener('resize', updateWindowWidth);
-		});
-
 		return {
-			slide: ref(1),
+			slide,
 			imageSrc,
+			t,
 		};
 	},
 });
@@ -92,13 +92,13 @@ export default defineComponent({
 <style lang="scss">
 @import '../assets/scss/main.scss';
 
-.carousel{
+.carousel {
   min-height: 70vh;
 }
 
 .glass-box {
   width: fit-content;
-  padding: $pad $pad*2;
+  padding: $pad $pad * 2;
   margin-top: 5vh;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -106,7 +106,7 @@ export default defineComponent({
   backdrop-filter: blur(7.1px);
   -webkit-backdrop-filter: blur(7.1px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  @include bp(m){
+  @include bp(m) {
     margin-top: 20vh;
   }
 }
@@ -120,12 +120,11 @@ export default defineComponent({
   background-repeat: no-repeat;
 }
 
-.glass-bg{
-  background-color: rgba(255, 255, 255, 0.7) ;
+.glass-bg {
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   backdrop-filter: blur(7.1px);
   padding: $pad;
-  margin-top: 10%
-
+  margin-top: 10%;
 }
 </style>

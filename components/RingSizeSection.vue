@@ -224,12 +224,12 @@
 					{{ $t('homeView.qualityText') }}
 				</p>
 			</div>
-      <div class="flexbox-item image3 mt-space-2 mb-space-2">
-        <NuxtImg
-            class="image"
-            src="https://abriumbi.sirv.com/volker-vogelringzange/g2.jpg"
-        />
-      </div>
+			<div class="flexbox-item image3 mt-space-2 mb-space-2">
+				<NuxtImg
+					class="image"
+					src="https://abriumbi.sirv.com/volker-vogelringzange/g2.jpg"
+				/>
+			</div>
 		</div>
 	</div>
 </template>

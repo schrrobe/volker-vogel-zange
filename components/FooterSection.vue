@@ -12,20 +12,20 @@
 						</p>
 						<ul class="law-menu">
 							<li class="law-menu">
-								<router-link
+								<NuxtLink
 									class="text-white"
 									:to="`/${locale}/impressum`"
 								>
 									{{ t('lawMenu.imprint') }}
-								</router-link>
+								</NuxtLink>
 							</li>
 							<li class="law-menu">
-								<router-link
+								<NuxtLink
 									class="text-white"
 									:to="`/${locale}/dsgvo`"
 								>
 									{{ t('lawMenu.consent') }}
-								</router-link>
+								</NuxtLink>
 							</li>
 						</ul>
 					</div>
@@ -46,7 +46,7 @@
 									name="mail"
 									color="white"
 									class="q-mr-xs"
-								/><span class="text-white">v.juengling@-t-online.de</span>
+								/><span class="text-white">v.juengling@t-online.de</span>
 							</li>
 						</ul>
 					</div>
@@ -61,7 +61,7 @@
 						<NuxtLink :to="switchLocalePath(lang.locale)">
 							{{ lang.text }}
 						</NuxtLink>
-						<span class="seperator">|</span>
+						<span class="separator">|</span>
 					</li>
 				</ul>
 			</div>
@@ -70,10 +70,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import ContentLayout from '../components/ContentLayout.vue';
 import ContentSection from '../components/ContentSection.vue';
+import { NuxtLink } from '#components'; // Import NuxtLink
 
 const { locale, t } = useI18n();
 
@@ -104,34 +105,29 @@ const langs = ref([
 <style lang="scss" scoped>
 @import '../assets/scss/vars.scss';
 
-.footer-section{
-  min-height: $header-height*1;
+.footer-section {
+  min-height: $header-height * 1;
 }
 .inline-list {
   list-style-type: none;
   padding: 0;
 }
-
 .inline-list li {
   display: inline-block;
-  //margin-right: 10px;
 }
 a {
   color: lightgrey;
   text-decoration: none;
 }
-
-.seperator {
+.separator {
   margin: 0 5px;
   color: lightgrey;
 }
-
 /* Hide the separator for the last item in the loop */
-ul.inline-list li:last-child .seperator {
+ul.inline-list li:last-child .separator {
   display: none;
 }
-
-.law-menu{
+.law-menu {
   margin: 0;
   padding: 0;
   list-style: none;

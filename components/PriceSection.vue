@@ -79,9 +79,10 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
+import { computed } from 'vue';
 
-const { t } = useI18n();
-const isDollar = ['ar', 'ae', 'qa', 'ir', 'om', 'bh', 'ar', 'ja', 'ru', 'en'].includes(t.value);
+const { t, locale } = useI18n();
+const isDollar = computed(() => ['ar', 'ae', 'qa', 'ir', 'om', 'bh', 'ar', 'ja', 'ru', 'en'].includes(locale.value));
 </script>
 
 <style scoped lang="scss">

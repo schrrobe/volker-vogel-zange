@@ -5,30 +5,7 @@
 </template>
 
 <script setup>
-// import { defineProps } from 'vue';
 
-// const props = defineProps({
-// 	fullHeight: {
-// 		type: Boolean,
-// 		default: false,
-// 	},
-// 	mt: {
-// 		type: String,
-// 		required: false,
-// 		default: '40px',
-// 	},
-// 	mb: {
-// 		type: String,
-// 		required: false,
-// 		default: '60px',
-// 	},
-// });
-
-// const classes = computed(() => {
-//   return {
-//     'full-height': props.fullHeight,
-//   };
-// });
 </script>
 
 <style lang="scss">
