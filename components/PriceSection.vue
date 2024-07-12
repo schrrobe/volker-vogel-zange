@@ -1,10 +1,10 @@
 <template>
 	<div class="row items-center show-desktop">
 		<div class="col-7">
-			<h2>{{ t('homeView.headerTong') }}</h2>
+			<h1 class="headline">{{ t('homeView.headerTong') }}</h1>
 			<div class="text-right q-pr-xl q-mb-xl">
 				<span class="price-old q-mr-md">
-					<span v-if="isDollar">$</span> 199 <span v-if="!isDollar">€</span>
+					<span v-if="isDollar">$</span> 159 <span v-if="!isDollar">€</span>
 				</span>
 				<span class="price">
 					<span v-if="isDollar">$</span> 130 <span v-if="!isDollar">€</span>
@@ -33,19 +33,23 @@
 			class="col-5"
 			style="margin: auto"
 		>
-			<NuxtImg
-				src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png"
-				width="433px"
-			/>
+      <client-only>
+        <lazy-nuxt-img
+            src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png"
+            width="433px"
+        />
+      </client-only>
 		</div>
 	</div>
 
 	<section class="section-a show-mobile">
 		<div>
 			<div>
-				<h2>Beringungszange für Adressringe</h2>
+        <h1 class="headline">{{ t('homeView.headerTong') }}</h1>
 				<div class="row justify-center">
-					<NuxtImg src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png" />
+          <client-only>
+            <lazy-nuxt-img src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png" />
+          </client-only>
 				</div>
 				<div class="row justify-center">
 					<span class="price-old q-mr-md q-mt-md">
@@ -60,7 +64,7 @@
 						<q-btn
 							class="q-mr-md"
 							color="primary"
-							label="Kontakt per Email"
+              :label="t('homeView.btnMail')"
 							href="mailto:v.juengling@-t-online.de"
 						/>
 					</div>
@@ -68,7 +72,7 @@
 						<q-btn
 							color="black"
 							href="https://wa.me/4915128803091"
-							label="Kontakt per Whatsapp "
+							:label="t('homeView.btnWhatsapp')"
 						/>
 					</div>
 				</div>
@@ -134,4 +138,16 @@ const isDollar = computed(() => ['ar', 'ae', 'qa', 'ir', 'om', 'bh', 'ar', 'ja',
     transform: rotate(-13deg) translateY(calc(50% - #{$lineThroughWidth}));
   }
 }
+  .headline {
+    font-size: $headline-h2;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 2;
+    text-align: center;
+    @include bp(l) {
+      font-size: $headline-h2;
+      line-height: 2.5;
+    }
+  }
 </style>

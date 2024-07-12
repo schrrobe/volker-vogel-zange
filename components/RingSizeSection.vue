@@ -24,19 +24,23 @@
 					{{ $t('homeView.ringSizeText') }}
 				</p>
 			</div>
+      <div class="flexbox-item image">
+        <client-only>
+          <lazy-nuxt-img
+              src="https://abriumbi.sirv.com/volker-vogelringzange/1.jpg"
+              width="90%"
+              height="400"
+          />
+        </client-only>
+      </div>
 			<div class="flexbox-item image">
-				<NuxtImg
-					src="https://abriumbi.sirv.com/volker-vogelringzange/1.jpg"
-					width="90%"
-					height="400"
-				/>
-			</div>
-			<div class="flexbox-item image">
-				<NuxtImg
-					src="https://abriumbi.sirv.com/volker-vogelringzange/2.jpg"
-					width="90%"
-					height="400"
-				/>
+        <client-only>
+          <lazy-nuxt-img
+              src="https://abriumbi.sirv.com/volker-vogelringzange/2.jpg"
+              width="90%"
+              height="400"
+          />
+        </client-only>
 			</div>
 			<div class="flexbox-item q-pl-md ">
 				<div class="row items-center q-pr-xl ">
@@ -83,18 +87,22 @@
 				</p>
 			</div>
 			<div class="flexbox-item image3">
-				<NuxtImg
-					src="https://abriumbi.sirv.com/volker-vogelringzange/3.jpg"
-					width="90%"
-					height="400"
-				/>
+        <client-only>
+          <lazy-nuxt-img
+              src="https://abriumbi.sirv.com/volker-vogelringzange/3.jpg"
+              width="90%"
+              height="400"
+          />
+        </client-only>
 			</div>
 			<div class="flexbox-item image4">
-				<NuxtImg
-					src="https://abriumbi.sirv.com/volker-vogelringzange/4.jpg"
-					width="90%"
-					height="400"
-				/>
+        <client-only>
+          <lazy-nuxt-img
+              src="https://abriumbi.sirv.com/volker-vogelringzange/4.jpg"
+              width="90%"
+              height="400"
+          />
+        </client-only>
 			</div>
 			<div class="flexbox-item q-pl-md">
 				<div class="row items-center q-pr-xl q-mt-xl">
@@ -142,10 +150,12 @@
 				</p>
 			</div>
 			<div class="flexbox-item image1 mt-space-2 mb-space-2">
-				<NuxtImg
-					class="image"
-					src="https://abriumbi.sirv.com/volker-vogelringzange/entenberingung-m.jpeg"
-				/>
+        <client-only>
+          <lazy-nuxt-img
+              class="image"
+              src="https://abriumbi.sirv.com/volker-vogelringzange/entenberingung-m.jpeg"
+          />
+        </client-only>
 			</div>
 			<div class="flexbox-item q-pa-xs mt-space-2 mb-space-2">
 				<div class="row items-center">
@@ -169,10 +179,12 @@
 				</p>
 			</div>
 			<div class="flexbox-item image2 mt-space-2 mb-space-2">
-				<NuxtImg
-					class="image"
-					src="https://abriumbi.sirv.com/volker-vogelringzange/vogelringzange.jpeg"
-				/>
+        <client-only>
+          <lazy-nuxt-img
+              class="image"
+              src="https://abriumbi.sirv.com/volker-vogelringzange/vogelringzange.jpeg"
+          />
+        </client-only>
 			</div>
 			<div class="flexbox-item q-pa-xs">
 				<div class="row items-center">
@@ -197,10 +209,12 @@
 				</p>
 			</div>
 			<div class="flexbox-item image3 mt-space-2 mb-space-2">
-				<NuxtImg
-					class="image"
-					src="https://abriumbi.sirv.com/volker-vogelringzange/greifvogelberingung-m.jpeg"
-				/>
+        <client-only>
+          <lazy-nuxt-img
+              class="image"
+              src="https://abriumbi.sirv.com/volker-vogelringzange/greifvogelberingung-m.jpeg"
+          />
+        </client-only>
 			</div>
 			<div class="flexbox-item image4 mt-space-2 mb-space-2" />
 			<div class="flexbox-item q-pa-xs mt-space-2 mb-space-2">
@@ -225,10 +239,12 @@
 				</p>
 			</div>
 			<div class="flexbox-item image3 mt-space-2 mb-space-2">
-				<NuxtImg
-					class="image"
-					src="https://abriumbi.sirv.com/volker-vogelringzange/g2.jpg"
-				/>
+        <client-only>
+          <lazy-nuxt-img
+              class="image"
+              src="https://abriumbi.sirv.com/volker-vogelringzange/g2.jpg"
+          />
+        </client-only>
 			</div>
 		</div>
 	</div>

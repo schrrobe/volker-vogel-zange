@@ -1,20 +1,22 @@
 <template>
-	<section style="overflow-x: hidden;">
-		<div class="row justify-center">
-			<div
-				v-for="img in images"
-				:key="img.src"
-				class="col-md-3 col-xs-12"
-			>
-				<lazy-nuxt-img
-					class="image"
-					:src="img.src"
-					width="100vw"
-					:height="img.height? img.height : '400px'"
-				/>
-			</div>
-		</div>
-	</section>
+  <client-only>
+    <section style="overflow-x: hidden;">
+      <div class="row justify-center">
+        <div
+            v-for="img in images"
+            :key="img.src"
+            class="col-md-3 col-xs-12"
+        >
+          <lazy-nuxt-img
+              class="image"
+              :src="img.src"
+              width="100vw"
+              :height="img.height? img.height : '400px'"
+          />
+        </div>
+      </div>
+    </section>
+  </client-only>
 </template>
 
 <script setup lang="ts">
