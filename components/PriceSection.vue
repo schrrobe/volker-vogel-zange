@@ -138,8 +138,8 @@ const isDollar = computed(() => ['ar', 'ae', 'qa', 'ir', 'om', 'bh', 'ar', 'ja',
     transform: rotate(-13deg) translateY(calc(50% - #{$lineThroughWidth}));
   }
 }
-  .headline {
-    font-size: $headline-h2;
+  h1 {
+    font-size: $headline-h2!important;
     white-space: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;

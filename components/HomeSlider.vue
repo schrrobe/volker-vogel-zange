@@ -21,12 +21,17 @@
 @import '../assets/scss/main.scss';
 
 .slider {
-  height: 70vh;
+  height: 90vh;
   background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+
+  @include bp(m){
+    height: 70vh;
+    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp');
+  }
 
   @include bp(l){
     background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp')
@@ -57,15 +62,6 @@
     font-size: $headline-h1;
     line-height:2.5;
   }
-}
-
-.triangle {
-  width: 100%;
-  min-height: 70vh;
-  border-right: 60vw solid transparent;
-  border-bottom: 120vw solid rgba(255, 255, 255, 0.7);
-  background-image: url('https://cdn.quasar.dev/img/mountains.jpg');
-  background-repeat: no-repeat;
 }
 
 .glass-bg {
