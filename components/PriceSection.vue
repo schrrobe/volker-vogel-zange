@@ -35,7 +35,7 @@
 		>
       <client-only>
         <lazy-nuxt-img
-            src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png"
+            src="/Beringungszange.png"
             width="433px"
         />
       </client-only>
@@ -48,7 +48,7 @@
         <h1 class="headline">{{ t('homeView.headerTong') }}</h1>
 				<div class="row justify-center">
           <client-only>
-            <lazy-nuxt-img src="https://abriumbi.sirv.com/volker-vogelringzange/Beringungszange.png" />
+            <lazy-nuxt-img src="/Beringungszange.png" />
           </client-only>
 				</div>
 				<div class="row justify-center">

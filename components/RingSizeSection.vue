@@ -89,7 +89,7 @@
 			<div class="flexbox-item image3">
         <client-only>
           <lazy-nuxt-img
-              src="https://abriumbi.sirv.com/volker-vogelringzange/3.jpg"
+              src="/3.jpg"
               width="90%"
               height="400"
           />
@@ -98,7 +98,7 @@
 			<div class="flexbox-item image4">
         <client-only>
           <lazy-nuxt-img
-              src="https://abriumbi.sirv.com/volker-vogelringzange/4.jpg"
+              src="/4.jpg"
               width="90%"
               height="400"
           />
@@ -153,7 +153,7 @@
         <client-only>
           <lazy-nuxt-img
               class="image"
-              src="https://abriumbi.sirv.com/volker-vogelringzange/entenberingung-m.jpeg"
+              src="/entenberingung-m.jpeg"
           />
         </client-only>
 			</div>
@@ -182,7 +182,7 @@
         <client-only>
           <lazy-nuxt-img
               class="image"
-              src="https://abriumbi.sirv.com/volker-vogelringzange/vogelringzange.jpeg"
+              src="/volker-vogelringzange/vogelringzange.jpeg"
           />
         </client-only>
 			</div>
@@ -212,7 +212,7 @@
         <client-only>
           <lazy-nuxt-img
               class="image"
-              src="https://abriumbi.sirv.com/volker-vogelringzange/greifvogelberingung-m.jpeg"
+              src="/volker-vogelringzange/greifvogelberingung-m.jpeg"
           />
         </client-only>
 			</div>
@@ -242,7 +242,7 @@
         <client-only>
           <lazy-nuxt-img
               class="image"
-              src="https://abriumbi.sirv.com/volker-vogelringzange/g2.jpg"
+              src="/g2.jpg"
           />
         </client-only>
 			</div>

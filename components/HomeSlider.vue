@@ -22,7 +22,7 @@
 
 .slider {
   height: 90vh;
-  background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp');
+  background-image: url('/bg-mobile.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -30,11 +30,11 @@
 
   @include bp(m){
     height: 70vh;
-    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp');
+    background-image: url('/bg-mobile.webp');
   }
 
   @include bp(l){
-    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp')
+    background-image: url('/bg-desktop.webp')
   }
 }
 

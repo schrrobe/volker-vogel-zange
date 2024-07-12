@@ -22,35 +22,35 @@
 <script setup lang="ts">
 const images = [
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/1.jpg',
+		src: '/1.jpg',
 		altText: 'Ringzange für Adressringe auf einem Stein mit anderen Falknersachen',
 	},
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/g9.jpeg',
+		src: '/g9.jpeg',
 		altText: 'Weimaranerhund und Gerfalke auf einer Wiese',
 	},
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/3.jpg',
+		src: '/3.jpg',
 		altText: 'Rackelwild wird beringt',
 	},
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/4.jpg',
+		src: '/4.jpg',
 		altText: 'Adressringzange für Ente ',
 	},
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/2.jpg',
+		src: '/2.jpg',
 		altText: 'Greifvogel Adressringzange',
 	},
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/g6.jpg',
+		src: '/g6.jpg',
 		altText: 'Adressringzange mit anderen Falknersachen',
 	},
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/g7.jpg',
+		src: '/g7.jpg',
 		altText: 'Ente wird beringt',
 	},
 	{
-		src: 'https://abriumbi.sirv.com/volker-vogelringzange/g8.jpeg',
+		src: '/g8.jpeg',
 		altText: 'Gerfalke jagd KrähenS',
 	},
 ];
