@@ -45,6 +45,10 @@
   }
 }
 
+.glass-box-title{
+  line-height: 1.5;
+}
+
 .triangle {
   width: 100%;
   min-height: 70vh;
