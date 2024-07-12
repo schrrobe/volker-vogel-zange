@@ -61,23 +61,20 @@ export default defineNuxtConfig({
 	target: 'static',
 	ssr: true,
 	devtools: { enabled: true },
-
+	head: {
+		link: [
+			{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+			{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+			{ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+			{ rel: 'manifest', href: '/site.webmanifest' },
+		],
+	},
 	modules: [
 		'@nuxtjs/i18n',
 		'nuxt-quasar-ui',
 		'@nuxt/image',
 		'@nuxt/eslint',
 	],
-	// router: {
-	// 	extendRoutes(routes, resolve) {
-	// 		routes.push(
-	// 			{ path: '/en/impressum', component: resolve(__dirname, 'pages/en/impressum.vue') },
-	// 			{ path: '/de/impressum', component: resolve(__dirname, 'pages/de/impressum.vue') },
-	// 			{ path: '/en/dsgvo', component: resolve(__dirname, 'pages/en/dsgvo.vue') },
-	// 			// Weitere Sprachen hier hinzufügen, falls erforderlich
-	// 		);
-	// 	}
-	// },
 	css: [
 		'~/assets/scss/styles.scss',
 	],
@@ -130,7 +127,6 @@ export default defineNuxtConfig({
 		},
 	},
 	nitro: {
-		// baseURL: "http://localhost:8000",
 		prerender: {
 			// crawlLinks: true,
 			failOnError: false,

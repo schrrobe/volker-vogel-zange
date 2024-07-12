@@ -2,10 +2,10 @@
 	<div class="footer-section bg-primary">
 		<ContentLayout>
 			<ContentSection>
-				<div class="row">
+				<div class="row justify-around">
 					<div
 						v-if="isEurope"
-						class="col-xs-12 col-md-6 q-pa-md"
+						class="col-xs-12 col-md-3 q-pa-md"
 					>
 						<p class="text-white law-menu-header">
 							<strong>{{ t('lawMenu.lawHead') }}</strong>
@@ -29,7 +29,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-xs-12 col-md-6 q-pa-md">
+					<div class="col-xs-12 col-md-3 q-pa-md">
 						<p class="text-white law-menu-header">
 							<strong>{{ t('impressum.contact') }}</strong>
 						</p>
@@ -49,6 +49,14 @@
 								/><span class="text-white">v.juengling@t-online.de</span>
 							</li>
 						</ul>
+					</div>
+					<div class="col-xs-12 col-md-3 q-pa-md justify-center">
+						<div class="qr-container rounded-borders">
+							<canvas
+								ref="qrcode"
+								class="qrcode"
+							/>
+						</div>
 					</div>
 				</div>
 			</ContentSection>
@@ -72,11 +80,14 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
+import QRCode from 'qrcode';
 import ContentLayout from '../components/ContentLayout.vue';
 import ContentSection from '../components/ContentSection.vue';
-import { NuxtLink } from '#components'; // Import NuxtLink
+import { NuxtLink } from '#components';
 
 const { locale, t } = useI18n();
+const qrcode = ref(null);
+const link = 'https://api.whatsapp.com/send/?phone=4915128803091&text&type=phone_number&app_absent=0';
 
 const isEurope = computed(() => {
 	return ['en', 'gb', 'es', 'fr', 'pl', 'sk', 'nl', 'de'].includes(locale.value);
@@ -100,6 +111,22 @@ const langs = ref([
 	{ locale: 'om', text: 'العربية (Oman)' },
 	{ locale: 'bh', text: 'العربية (Bahrain)' },
 ]);
+
+const generateQRCode = async () => {
+	try {
+		await QRCode.toCanvas(qrcode.value, link, {
+			width: '178px',
+			height: '178px',
+		});
+	}
+	catch {
+		console.error('Fehler qrcode konnte nicht generiert werden');
+	}
+};
+
+onMounted(() => {
+	generateQRCode();
+});
 </script>
 
 <style lang="scss" scoped>

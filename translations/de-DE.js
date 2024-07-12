@@ -1,10 +1,10 @@
 export default {
 	homeView: {
-		headerTong: 'Beringungszange für Adressringe',
+		headerTong: 'Adressringzange für Adressringe',
 		shipping: 'zzgl. Versand',
 		btnMail: 'Kontakt per Email',
 		btnWhatsapp: 'Kontakt per Whatsapp',
-		titleHighligted: 'Hochwertige Beringungszangen',
+		titleHighligted: 'Hochwertige Adressringzangen',
 		title: 'für die Falknerei und ornithologische Vogelberingung',
 		iconBoxTitle: 'Warum unsere Zange die beste Wahl für Ihre Vogelberingung ist!',
 		iconBox: {

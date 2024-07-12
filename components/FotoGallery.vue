@@ -7,8 +7,9 @@
 				class="col-md-3 col-xs-12"
 			>
 				<lazy-nuxt-img
+					class="image"
 					:src="img.src"
-					width="100%"
+					width="100vw"
 					:height="img.height? img.height : '400px'"
 				/>
 			</div>
@@ -20,7 +21,7 @@
 const images = [
 	{
 		src: 'https://abriumbi.sirv.com/volker-vogelringzange/1.jpg',
-		altText: 'Beringungszange für Adressringe auf einem Stein mat anderen Falknersachen',
+		altText: 'Ringzange für Adressringe auf einem Stein mit anderen Falknersachen',
 	},
 	{
 		src: 'https://abriumbi.sirv.com/volker-vogelringzange/g9.jpeg',

@@ -1,103 +1,37 @@
 <template>
-	<q-carousel
-		v-model="slide"
-		class="carousel"
-		style="height: 70vh;"
-		animated
-		arrows
-		navigation
-		infinite
-	>
-		<q-carousel-slide
-			style="overflow-y: hidden!important;"
-			:name="1"
-			:img-src="imageSrc"
-		>
-			<content-layout full-height>
-				<content-section full-height>
-					<div class="show-mobile">
-						<div class="row justify-center content-center">
-							<div class="glass-box">
-								<h1 class="glass-box-title">
-									<strong>{{ $t('homeView.titleHighligted') }}</strong> {{ $t('homeView.title') }}
-								</h1>
-							</div>
-						</div>
-					</div>
-					<div class="show-desktop">
-						<div class="row justify-end content-end">
-							<div class="glass-box">
-								<h1 class="glass-box-title">
-									<strong>{{ $t('homeView.titleHighligted') }}</strong> {{ $t('homeView.title') }}
-								</h1>
-							</div>
-						</div>
-					</div>
-				</content-section>
-			</content-layout>
-		</q-carousel-slide>
-	</q-carousel>
+	<div class="row slider">
+		<div class="row justify-center ">
+			<div class="col-xs-11 col-md-8">
+				<div class="glass-box">
+					<h1 class="glass-box-title">
+						<strong>{{ $t('homeView.titleHighligted') }}</strong> {{ $t('homeView.title') }}
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
-<script>
-import { defineComponent, ref, computed, onMounted, onBeforeUnmount } from 'vue';
-import { useI18n } from 'vue-i18n';
-
-export default defineComponent({
-	name: 'HomeSlider',
-	setup() {
-		const { t } = useI18n();
-		const windowWidth = ref(0);
-		const slide = ref(1);
-		const imageSrc = computed(() => {
-			return windowWidth.value < 1024
-				? 'https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp'
-				: 'https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp';
-		});
-
-		const updateWindowWidth = () => {
-			if (typeof window !== 'undefined') {
-				windowWidth.value = window.innerWidth;
-			}
-		};
-
-		const preventScroll = (event) => {
-			event.preventDefault();
-		};
-
-		onMounted(() => {
-			updateWindowWidth(); // Initial setting of window width
-			if (typeof window !== 'undefined') {
-				window.addEventListener('resize', updateWindowWidth);
-				document.addEventListener('wheel', preventScroll, { passive: false });
-			}
-		});
-
-		onBeforeUnmount(() => {
-			if (typeof window !== 'undefined') {
-				window.removeEventListener('resize', updateWindowWidth);
-				document.removeEventListener('wheel', preventScroll);
-			}
-		});
-
-		return {
-			slide,
-			imageSrc,
-			t,
-		};
-	},
-});
+<script setup>
 </script>
 
 <style lang="scss">
 @import '../assets/scss/main.scss';
 
-.carousel {
-  min-height: 70vh;
+.slider {
+  height: 70vh;
+  background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-mobile.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  @include bp(l){
+    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp')
+  }
 }
 
 .glass-box {
-  width: fit-content;
   padding: $pad $pad * 2;
   margin-top: 5vh;
   background: rgba(255, 255, 255, 0.2);

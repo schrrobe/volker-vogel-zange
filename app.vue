@@ -42,7 +42,7 @@ const seoDescription = computed(() => {
 useSeoMeta({
 	title: seoTitle,
 	ogTitle: seoDescription,
-	description: seoTitle,
+	description: seoDescription,
 	ogDescription: seoDescription,
 	ogImage: imageSrc,
 	twitterCard: 'https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp',
