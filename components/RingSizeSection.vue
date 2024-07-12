@@ -182,7 +182,7 @@
         <client-only>
           <lazy-nuxt-img
               class="image"
-              src="/volker-vogelringzange/vogelringzange.jpeg"
+              src="/vogelringzange.jpeg"
           />
         </client-only>
 			</div>
@@ -212,7 +212,7 @@
         <client-only>
           <lazy-nuxt-img
               class="image"
-              src="/volker-vogelringzange/greifvogelberingung-m.jpeg"
+              src="/greifvogelberingung-m.jpeg"
           />
         </client-only>
 			</div>
