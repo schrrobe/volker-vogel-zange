@@ -43,7 +43,7 @@
   background-repeat: no-repeat;
   background-attachment: scroll; /* Ändere dies von fixed auf scroll */
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 
   @include bp(m) {
     height: 70vh;
