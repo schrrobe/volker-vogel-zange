@@ -18,25 +18,69 @@
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
 
+//.slider {
+//  height: auto;
+//  background-image: url('/bg-mobile.png');
+//  background-repeat: no-repeat;
+//  background-attachment: fixed;
+//  background-position: center;
+//  background-size: contain;
+//
+//  @include bp(m){
+//    height: 70vh;
+//    background-image: url('/bg-desktop.webp');;
+//    background-size: cover;
+//  }
+//
+//  @include bp(l){
+//    background-image: url('/bg-desktop.webp');
+//    background-size: cover;
+//  }
+//}
 .slider {
-  height: 80vh;
+  height: auto;
   background-image: url('/bg-mobile.png');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll; /* Ändere dies von fixed auf scroll */
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
-  @include bp(m){
+  @include bp(m) {
     height: 70vh;
-    background-image: url('/bg-mobile.webp');
-    background-size: cover;
-  }
-
-  @include bp(l){
     background-image: url('/bg-desktop.webp');
     background-size: cover;
+    background-attachment: fixed; /* Setze dies hier für Desktop-Browser */
+  }
+
+  @include bp(l) {
+    background-image: url('/bg-desktop.webp');
+    background-size: cover;
+    background-attachment: fixed; /* Setze dies hier für Desktop-Browser */
   }
 }
+
+/* Spezifische Anpassungen für Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .slider {
+      background-attachment: scroll; /* Spezifische Anpassung für Safari */
+    }
+
+    @include bp(m) {
+      .slider {
+        background-attachment: fixed; /* Setze es für größere Bildschirme */
+      }
+    }
+
+    @include bp(l) {
+      .slider {
+        background-attachment: fixed; /* Setze es für größere Bildschirme */
+      }
+    }
+  }
+}
+
+
 
 .glass-box {
   padding: $pad $pad * 2;
