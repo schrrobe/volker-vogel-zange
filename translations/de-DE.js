@@ -1,6 +1,6 @@
 export default {
 	homeView: {
-		headerTong: 'Adressringzange für Adressringe',
+		headerTong: 'Beringungszange für Adressringe',
 		shipping: 'zzgl. Versand',
 		btnMail: 'Kontakt per Email',
 		btnWhatsapp: 'Kontakt per Whatsapp',

@@ -2,7 +2,7 @@
   <client-only>
     <div class="row slider">
       <div class="row justify-center ">
-        <div class="col-xs-11 col-md-8">
+        <div class="col-xs-11 col-md-8 q-pa-xs">
           <div class="glass-box">
             <p class="glass-box-title">
               <strong>{{ $t('homeView.titleHighligted') }}</strong> {{ $t('homeView.title') }}
@@ -21,20 +21,22 @@
 @import '../assets/scss/main.scss';
 
 .slider {
-  height: 90vh;
+  height: 80vh;
   background-image: url('/bg-mobile.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 
   @include bp(m){
     height: 70vh;
     background-image: url('/bg-mobile.webp');
+    background-size: cover;
   }
 
   @include bp(l){
-    background-image: url('/bg-desktop.webp')
+    background-image: url('/bg-desktop.webp');
+    background-size: cover;
   }
 }
 
@@ -53,8 +55,9 @@
 }
 
 .glass-box-title{
+  color: black;
   line-height: 1.5;
-  font-size: $headline-h2* 0.8;
+  font-size: $headline-h2* 0.65;
   white-space: normal;
   overflow-wrap: break-word;
   word-wrap: break-word; /* Für ältere Browser */;
