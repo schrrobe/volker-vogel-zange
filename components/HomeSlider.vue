@@ -1,7 +1,6 @@
 <template>
   <client-only>
-    <div class="row slider">
-      <div class="row justify-center ">
+    <div class="row slider justify-center">
         <div class="col-xs-11 col-md-8 q-pa-xs">
           <div class="glass-box">
             <p class="glass-box-title">
@@ -9,7 +8,6 @@
             </p>
           </div>
         </div>
-      </div>
     </div>
   </client-only>
 </template>
@@ -26,7 +24,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 
   @include bp(m){
     height: 70vh;
