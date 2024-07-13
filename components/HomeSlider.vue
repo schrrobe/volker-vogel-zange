@@ -22,7 +22,7 @@
 
 .slider {
   height: 80vh;
-  background-image: url('/bg-mobile.webp');
+  background-image: url('/bg-mobile.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
