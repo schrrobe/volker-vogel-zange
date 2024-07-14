@@ -3,11 +3,8 @@
 		<div class="col-7">
 			<h1 class="headline">{{ t('homeView.headerTong') }}</h1>
 			<div class="text-right q-pr-xl q-mb-xl">
-				<span class="price-old q-mr-md">
-					<span v-if="isDollar">$</span> 159 <span v-if="!isDollar">€</span>
-				</span>
 				<span class="price">
-					<span v-if="isDollar">$</span> 130 <span v-if="!isDollar">€</span>
+					<span v-if="isDollar">$</span> 140 <span v-if="!isDollar">€</span>
 				</span>
 				<span class="q-ml-md">{{ t('homeView.shipping') }}</span>
 			</div>
@@ -52,12 +49,10 @@
           </client-only>
 				</div>
 				<div class="row justify-center">
-					<span class="price-old q-mr-md q-mt-md">
-						<span v-if="isDollar">$</span> 199 <span v-if="!isDollar">€</span>
-					</span>
 					<span class="price">
-						<span v-if="isDollar">$</span> 130 <span v-if="!isDollar">€</span>
+						<span v-if="isDollar">$</span> 140 <span v-if="!isDollar">€</span>
 					</span>
+          <span class="q-ml-md">{{ t('homeView.shipping') }}</span>
 				</div>
 				<div class="row justify-around q-mt-lg">
 					<div class="col-5">

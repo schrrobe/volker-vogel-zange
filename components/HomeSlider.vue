@@ -47,13 +47,13 @@
 
   @include bp(m) {
     height: 70vh;
-    background-image: url('/bg-desktop.webp');
+    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp');
     background-size: cover;
     background-attachment: fixed; /* Setze dies hier für Desktop-Browser */
   }
 
   @include bp(l) {
-    background-image: url('/bg-desktop.webp');
+    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp');
     background-size: cover;
     background-attachment: fixed; /* Setze dies hier für Desktop-Browser */
   }
