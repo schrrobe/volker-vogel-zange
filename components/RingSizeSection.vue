@@ -27,7 +27,7 @@
       <div class="flexbox-item image">
         <client-only>
           <lazy-nuxt-img
-              src="https://abriumbi.sirv.com/volker-vogelringzange/1.jpg"
+              src="/1.jpg"
               width="90%"
               height="400"
           />
@@ -36,7 +36,7 @@
 			<div class="flexbox-item image">
         <client-only>
           <lazy-nuxt-img
-              src="https://abriumbi.sirv.com/volker-vogelringzange/2.jpg"
+              src="/2.jpg"
               width="90%"
               height="400"
           />
