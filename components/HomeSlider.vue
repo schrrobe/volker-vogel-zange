@@ -38,7 +38,7 @@
 //  }
 //}
 .slider {
-  height: auto;
+  min-height: 60vh;
   background-image: url('/bg-mobile.png');
   background-repeat: no-repeat;
   background-attachment: scroll; /* Ändere dies von fixed auf scroll */
@@ -47,13 +47,13 @@
 
   @include bp(m) {
     height: 70vh;
-    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp');
+    background-image: url('/falken-federn.webp');
     background-size: cover;
     background-attachment: fixed; /* Setze dies hier für Desktop-Browser */
   }
 
   @include bp(l) {
-    background-image: url('https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp');
+    background-image: url('/falken-federn.webp');
     background-size: cover;
     background-attachment: fixed; /* Setze dies hier für Desktop-Browser */
   }

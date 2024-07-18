@@ -53,10 +53,12 @@
 					<div class="col-xs-12 col-md-3 q-pa-md justify-center">
             <p class="text-white"><strong>{{t('homeView.btnWhatsapp')}}</strong></p>
 						<div class="qr-container rounded-borders">
+              <a href="https://wa.me/4915128803091">
 							<canvas
 								ref="qrcode"
 								class="qrcode"
 							/>
+              </a>
 						</div>
 					</div>
 				</div>

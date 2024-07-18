@@ -6,7 +6,7 @@
 				<span class="price">
 					<span v-if="isDollar">$</span> 140 <span v-if="!isDollar">€</span>
 				</span>
-				<span class="q-ml-md">{{ t('homeView.shipping') }}</span>
+				<span class="q-ml-md shipping-text">{{ t('homeView.shipping') }}</span>
 			</div>
 			<div class="row justify-between q-mt-lg q-pl-md">
 				<div class="col-6">
@@ -143,6 +143,12 @@ const isDollar = computed(() => ['ar', 'ae', 'qa', 'ir', 'om', 'bh', 'ar', 'ja',
     @include bp(l) {
       font-size: $headline-h2;
       line-height: 2.5;
+    }
+  }
+  .shipping-text{
+    align-self: center;
+    @include bp(l){
+      align-self: unset;
     }
   }
 </style>
