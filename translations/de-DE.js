@@ -53,4 +53,10 @@ export default {
 		imprint: 'Impressum',
 		consent: 'Datenschutzerklärung',
 	},
+	cookieBox: {
+		headline: 'Diese Webseite verwendet Cookies',
+		text: 'Wir verarbeiten technische Cookies, die zwingend erforderlich sind, um sich auf der Webseite zu bewegen, grundlegende Funktionen zu nutzen und die Sicherheit der Webseite zu gewährleisten; sie sammeln weder Informationen über Sie zu Marketingzwecken noch speichern sie, welche Webseiten Sie besucht haben. Rechtsgrundlage für Cookies, die unbedingt erforderlich sind, um Ihnen den ausdrücklich gewünschten Dienst zur Verfügung zu stellen, ist § 25 Abs. 2 Nr. 2 TTDSG. Jeder Einsatz von Cookies, der hierfür nicht zwingend technisch erforderlich ist, stellt eine Datenverarbeitung dar, die nur mit einer ausdrücklichen und aktiven Einwilligung Ihrerseits gem. § 25 Abs. 1 TTDSG iVm Art. 6 Abs. 1 S. 1 lit. a DS-GVO erlaubt ist.',
+		buttonFirst: 'Ich akzeptiere alle',
+		buttonSecond: 'Nur essenzielle Cookies akzeptieren',
+	}
 };

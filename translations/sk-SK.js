@@ -52,5 +52,11 @@ export default {
 		imprint: 'Odtlačok',
 		consent: 'Zásady ochrany osobných údajov',
 	},
+	cookieBox: {
+		headline: 'Táto webová stránka používa cookies',
+		text: 'Spracúvame technické cookies, ktoré sú nevyhnutné na pohyb po webovej stránke, používanie základných funkcií a zabezpečenie bezpečnosti webovej stránky; nezhromažďujú informácie o vás na marketingové účely ani neukladajú, ktoré webové stránky ste navštívili. Právnym základom pre cookies, ktoré sú nevyhnutné na poskytovanie výslovne požadovanej služby, je § 25 ods. 2 č. 2 TTDSG. Každé použitie cookies, ktoré nie sú pre tento účel technicky nevyhnutné, predstavuje spracúvanie údajov, ktoré je povolené len s vaším výslovným a aktívnym súhlasom v súlade s § 25 ods. 1 TTDSG v spojení s čl. 6 ods. 1 písm. a DS-GVO.',
+		buttonFirst: 'Prijímam všetko',
+		buttonSecond: 'Prijať iba nevyhnutné cookies',
+	},
 
 };

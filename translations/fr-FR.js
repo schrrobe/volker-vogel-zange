@@ -52,5 +52,10 @@ export default {
 		imprint: 'Mentions légales',
 		consent: 'Politique de confidentialité',
 	},
-
+	cookieBox: {
+		headline: 'Ce site web utilise des cookies',
+		text: 'Nous traitons des cookies techniques strictement nécessaires pour naviguer sur le site web, utiliser des fonctions de base et garantir la sécurité du site web; ils ne collectent pas d\'informations sur vous à des fins de marketing ni ne stockent les sites web que vous avez visités. La base légale pour les cookies strictement nécessaires pour vous fournir le service expressément demandé est § 25 Abs. 2 Nr. 2 TTDSG. Toute utilisation de cookies qui n\'est pas strictement techniquement nécessaire à cette fin constitue un traitement de données qui n\'est autorisé qu\'avec votre consentement explicite et actif conformément à § 25 Abs. 1 TTDSG en conjonction avec l\'Art. 6 Abs. 1 S. 1 lit. a DS-GVO.',
+		buttonFirst: 'J\'accepte tout',
+		buttonSecond: 'Accepter uniquement les cookies essentiels',
+	},
 };

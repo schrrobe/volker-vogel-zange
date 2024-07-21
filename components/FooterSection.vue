@@ -93,7 +93,7 @@ const qrcode = ref(null);
 const link = 'https://api.whatsapp.com/send/?phone=4915128803091&text&type=phone_number&app_absent=0';
 
 const isEurope = computed(() => {
-	return ['en', 'gb', 'es', 'fr', 'pl', 'sk', 'nl', 'de'].includes(locale.value);
+	return ['en', 'gb', 'es', 'fr', 'pl', 'sk', 'nl', 'de', 'pt', 'cs'].includes(locale.value);
 });
 
 const langs = ref([
@@ -113,6 +113,8 @@ const langs = ref([
 	{ locale: 'ir', text: 'فارسی (Iran)' },
 	{ locale: 'om', text: 'العربية (Oman)' },
 	{ locale: 'bh', text: 'العربية (Bahrain)' },
+  { locale: 'pt', text: 'Português' },
+  { locale: 'cs', text: 'Čeština' },
 ]);
 
 const generateQRCode = async () => {

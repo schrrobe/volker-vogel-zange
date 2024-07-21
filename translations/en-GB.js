@@ -52,4 +52,10 @@ export default {
 		imprint: 'Imprint',
 		consent: 'Privacy Policy',
 	},
+	cookieBox: {
+		headline: 'This website uses cookies',
+		text: 'We process technical cookies that are strictly necessary to navigate the website, use basic functions, and ensure the security of the website; they do not collect information about you for marketing purposes nor do they store which websites you have visited. The legal basis for cookies that are strictly necessary to provide you with the expressly requested service is § 25 Abs. 2 Nr. 2 TTDSG. Any use of cookies that is not strictly technically necessary for this purpose constitutes data processing that is only permitted with your explicit and active consent pursuant to § 25 Abs. 1 TTDSG in conjunction with Art. 6 Abs. 1 S. 1 lit. a DS-GVO.',
+		buttonFirst: 'I accept all',
+		buttonSecond: 'Accept essential cookies only',
+	},
 };

@@ -52,5 +52,10 @@ export default {
 		imprint: 'Oświadczenie prawne',
 		consent: 'Polityka prywatności',
 	},
-
+	cookieBox: {
+		headline: 'Ta strona używa plików cookie',
+		text: 'Przetwarzamy techniczne pliki cookie, które są niezbędne do poruszania się po stronie, korzystania z podstawowych funkcji oraz zapewnienia bezpieczeństwa strony; nie zbierają one informacji o Tobie w celach marketingowych ani nie przechowują informacji o odwiedzanych przez Ciebie stronach. Podstawą prawną dla plików cookie, które są absolutnie niezbędne do świadczenia wyraźnie żądanej usługi, jest § 25 Abs. 2 Nr. 2 TTDSG. Jakiekolwiek użycie plików cookie, które nie są absolutnie niezbędne technicznie do tego celu, stanowi przetwarzanie danych, które jest dozwolone tylko za Twoją wyraźną i aktywną zgodą zgodnie z § 25 Abs. 1 TTDSG w powiązaniu z Art. 6 Abs. 1 S. 1 lit. a DS-GVO.',
+		buttonFirst: 'Akceptuję wszystkie',
+		buttonSecond: 'Akceptuj tylko niezbędne pliki cookie',
+	},
 };

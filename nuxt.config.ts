@@ -97,6 +97,8 @@ export default defineNuxtConfig({
 			{ code: 'ir', iso: 'fa-IR', name: 'فارسی (Iran)', file: 'fa-IR.js' },
 			{ code: 'om', iso: 'ar-OM', name: 'العربية (Oman)', file: 'ar-OM.js' },
 			{ code: 'bh', iso: 'ar-BH', name: 'العربية (Bahrain)', file: 'ar-BH.js' },
+			{ code: 'cs', iso: 'cs-CZ', name: 'Čeština', file: 'cs-CZ.js' },
+			{ code: 'pt', iso: 'pt-PT', name: 'Português', file: 'pt-PT.js' },
 		],
 		lazy: true,
 		langDir: 'translations/',

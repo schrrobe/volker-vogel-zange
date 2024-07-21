@@ -52,5 +52,10 @@ export default {
 		imprint: 'Aviso legal',
 		consent: 'Política de privacidad',
 	},
-
+	cookieBox: {
+		headline: 'Este sitio web utiliza cookies',
+		text: 'Procesamos cookies técnicas que son estrictamente necesarias para navegar por el sitio web, utilizar funciones básicas y garantizar la seguridad del sitio web; no recopilan información sobre usted con fines de marketing ni almacenan qué sitios web ha visitado. La base legal para las cookies que son estrictamente necesarias para proporcionarle el servicio expresamente solicitado es § 25 Abs. 2 Nr. 2 TTDSG. Cualquier uso de cookies que no sea estrictamente técnicamente necesario para este propósito constituye un procesamiento de datos que solo está permitido con su consentimiento explícito y activo de acuerdo con § 25 Abs. 1 TTDSG junto con el Art. 6 Abs. 1 S. 1 lit. a DS-GVO.',
+		buttonFirst: 'Acepto todas',
+		buttonSecond: 'Aceptar solo cookies esenciales',
+	},
 };

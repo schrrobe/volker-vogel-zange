@@ -8,7 +8,7 @@
 				</span>
 				<span class="q-ml-md shipping-text">{{ t('homeView.shipping') }}</span>
 			</div>
-			<div class="row justify-between q-mt-lg q-pl-md">
+			<div class="row jus q-mt-lg q-pl-md">
 				<div class="col-6">
 					<q-btn
 						class="q-mr-md"

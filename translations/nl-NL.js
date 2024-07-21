@@ -52,4 +52,11 @@ export default {
 		imprint: 'Afdruk',
 		consent: 'Privacybeleid',
 	},
+	cookieBox: {
+		headline: 'Deze website gebruikt cookies',
+		text: 'We verwerken technische cookies die strikt noodzakelijk zijn om op de website te navigeren, basisfuncties te gebruiken en de beveiliging van de website te waarborgen; ze verzamelen geen informatie over u voor marketingdoeleinden en slaan niet op welke websites u hebt bezocht. De wettelijke basis voor cookies die strikt noodzakelijk zijn om u de uitdrukkelijk gevraagde dienst te leveren, is § 25 Abs. 2 Nr. 2 TTDSG. Elk gebruik van cookies dat hiervoor niet strikt technisch noodzakelijk is, vormt een gegevensverwerking die alleen is toegestaan met uw uitdrukkelijke en actieve toestemming volgens § 25 Abs. 1 TTDSG in samenhang met Art. 6 Abs. 1 S. 1 lit. a DS-GVO.',
+		buttonFirst: 'Ik accepteer alles',
+		buttonSecond: 'Alleen essentiële cookies accepteren',
+	},
+
 };
