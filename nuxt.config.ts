@@ -104,6 +104,8 @@ export default defineNuxtConfig({
 			{ code: 'cs', iso: 'cs-CZ', name: 'Čeština', file: 'cs-CZ.js' },
 			{ code: 'pt', iso: 'pt-PT', name: 'Português', file: 'pt-PT.js' },
 		],
+		baseUrl: 'https://beringungszange.de',
+		seo: true,
 		lazy: true,
 		langDir: 'translations/',
 		defaultLocale: 'en',

@@ -41,7 +41,7 @@
 import { useI18n } from 'vue-i18n';
 import { computed, ref } from 'vue';
 const { gtag, initialize } = useGtag()
-import HeaderSection from '../components/HeaderSection.vue';
+import HeaderSection from '~/components/HeaderSection.vue';
 import FooterSection from '~/components/FooterSection.vue';
 import PageOverlay from  '~/components/PageOverlay/PageOverlay.vue'
 import VzModal from "~/components/modal/VzModal.vue";
@@ -50,7 +50,7 @@ const route = useRoute();
 
 const showCookieModal = ref(false)
 
-const isProd = window.location.host === 'beringungszange.de'
+const isProd = process.client ? window.location.host === 'beringungszange.de' : false;
 
 const windowWidth = ref(0);
 const { t } = useI18n();
@@ -89,7 +89,6 @@ function getCookie(name) {
   if (parts.length === 2) return parts.pop().split(';').shift();
   return null;
 }
-
 
 onMounted(() => {
 
