@@ -74,7 +74,8 @@ export default defineNuxtConfig({
         'nuxt-quasar-ui',
         '@nuxt/image',
         '@nuxt/eslint',
-        "nuxt-gtag"
+        "nuxt-gtag",
+        "@nuxtjs/sitemap"
     ],
 	css: [
 		'~/assets/scss/styles.scss',
@@ -82,6 +83,10 @@ export default defineNuxtConfig({
 	gtag: {
 		id: 'G-PFTVDF0479',
 		enabled: false,
+	},
+	site: {
+		url: 'https://beringungszange.de',
+		trailingSlash: true,
 	},
 	i18n: {
 		locales: [

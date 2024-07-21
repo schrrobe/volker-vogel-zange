@@ -3,6 +3,7 @@
     <NuxtWelcome />
   </div> -->
 	<div :class="textAlignmentClass">
+    <Html :lang="htmlAttrs.lang" :dir="htmlAttrs.dir"/>
 		<HeaderSection />
         <page-overlay v-if="showCookieModal">
           <VzModal medium :closable="false">
@@ -103,6 +104,12 @@ onMounted(() => {
     showCookieModal.value = true;
   }
 })
+
+const head = useLocaleHead({
+  addDirAttribute: true,
+  addSeoAttributes: true,
+})
+const htmlAttrs = computed(() => head.value.htmlAttrs)
 
 useSeoMeta({
 	title: seoTitle,
