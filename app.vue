@@ -16,7 +16,7 @@
                     size="100%"
                     color="positive"
                     :label="t('cookieBox.buttonFirst')"
-                    @click="setCookie('cookieBar', 'true', 30 )"
+                    @click="setCookie('beringungszangeCookieBar', 'true', 30 )"
                 />
               </div>
               <div class="col-12 co-md-6 justify-center">
@@ -40,6 +40,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 import { computed, ref } from 'vue';
+const { gtag, initialize } = useGtag()
 import HeaderSection from '../components/HeaderSection.vue';
 import FooterSection from '~/components/FooterSection.vue';
 import PageOverlay from  '~/components/PageOverlay/PageOverlay.vue'
@@ -48,6 +49,8 @@ import VzModal from "~/components/modal/VzModal.vue";
 const route = useRoute();
 
 const showCookieModal = ref(false)
+
+const isProd = window.location.host === 'beringungszange.de'
 
 const windowWidth = ref(0);
 const { t } = useI18n();
@@ -74,6 +77,9 @@ function setCookie(name, value, days) {
   date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
   const expires = "expires=" + date.toUTCString();
   document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  if(isProd){
+    initialize();
+  }
   showCookieModal.value = false;
 }
 
@@ -84,12 +90,16 @@ function getCookie(name) {
   return null;
 }
 
+
 onMounted(() => {
 
-  const consent = getCookie('cookieBar')
+  const consent = getCookie('beringungszangeCookieBar')
 
   if(consent ==='true'){
     showCookieModal.value = false;
+    if(isProd){
+      initialize();
+    }
   }else{
     showCookieModal.value = true;
   }

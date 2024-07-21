@@ -70,15 +70,19 @@ export default defineNuxtConfig({
 		],
 	},
 	modules: [
-		'@nuxtjs/i18n',
-		'nuxt-quasar-ui',
-		'@nuxt/image',
-		'@nuxt/eslint',
-	],
+        '@nuxtjs/i18n',
+        'nuxt-quasar-ui',
+        '@nuxt/image',
+        '@nuxt/eslint',
+        "nuxt-gtag"
+    ],
 	css: [
 		'~/assets/scss/styles.scss',
 	],
-
+	gtag: {
+		id: 'G-PFTVDF0479',
+		enabled: false,
+	},
 	i18n: {
 		locales: [
 			{ code: 'en', iso: 'en-US', name: 'English (US)', file: 'en-US.js' },
@@ -114,12 +118,10 @@ export default defineNuxtConfig({
 			localeDetector: './translations/localeDetector.ts',
 		},
 	},
-
 	image: {
 		// dir: 'assets/img',
 		domains: ['abriumbi.sirv.com'],
 	},
-
 	eslint: {
 		config: {
 			stylistic: {
