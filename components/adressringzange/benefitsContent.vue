@@ -13,7 +13,7 @@
 						/>
 					</div>
 					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('homeView.ringSizeTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringSizeTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -21,7 +21,7 @@
 					size="3px"
 				/>
 				<p class="text-white q-pr-xl">
-					{{ $t('homeView.ringSizeText') }}
+					{{ $t('adressringzangeView.ringSizeText') }}
 				</p>
 			</div>
 			<div class="flexbox-item image">
@@ -53,7 +53,7 @@
 						/>
 					</div>
 					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('homeView.ringDestructionTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringDestructionTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -61,7 +61,7 @@
 					size="3px"
 				/>
 				<p class="text-white q-pr-xl">
-					{{ $t('homeView.ringDestructionText') }}
+					{{ $t('adressringzangeView.ringDestructionText') }}
 				</p>
 			</div>
 			<div class="flexbox-item q-pr-md">
@@ -75,7 +75,7 @@
 						/>
 					</div>
 					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('homeView.easyHandlingTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.easyHandlingTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -83,7 +83,7 @@
 					size="3px"
 				/>
 				<p class="text-white q-pr-xl">
-					{{ $t('homeView.easyHandlingText') }}
+					{{ $t('adressringzangeView.easyHandlingText') }}
 				</p>
 			</div>
 			<div class="flexbox-item image3">
@@ -114,7 +114,7 @@
 						/>
 					</div>
 					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('homeView.qualityTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.qualityTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -122,7 +122,7 @@
 					size="3px"
 				/>
 				<p class="text-white q-pr-xl">
-					{{ $t('homeView.qualityText') }}
+					{{ $t('adressringzangeView.qualityText') }}
 				</p>
 			</div>
 		</div>
@@ -138,7 +138,7 @@
 						/>
 					</div>
 					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('homeView.ringSizeTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringSizeTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -146,7 +146,7 @@
 					size="3px"
 				/>
 				<p class="text-white">
-					{{ $t('homeView.ringSizeText') }}
+					{{ $t('adressringzangeView.ringSizeText') }}
 				</p>
 			</div>
 			<div class="flexbox-item image1 mt-space-2 mb-space-2">
@@ -167,7 +167,7 @@
 						/>
 					</div>
 					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('homeView.ringDestructionTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringDestructionTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -175,7 +175,7 @@
 					size="3px"
 				/>
 				<p class="text-white">
-					{{ $t('homeView.ringDestructionText') }}
+					{{ $t('adressringzangeView.ringDestructionText') }}
 				</p>
 			</div>
 			<div class="flexbox-item image2 mt-space-2 mb-space-2">
@@ -197,7 +197,7 @@
 						/>
 					</div>
 					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('homeView.easyHandlingTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.easyHandlingTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -205,7 +205,7 @@
 					size="3px"
 				/>
 				<p class="text-white">
-					{{ $t('homeView.easyHandlingText') }}
+					{{ $t('adressringzangeView.easyHandlingText') }}
 				</p>
 			</div>
 			<div class="flexbox-item image3 mt-space-2 mb-space-2">
@@ -227,7 +227,7 @@
 						/>
 					</div>
 					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('homeView.qualityTitle') }}</strong></span>
+						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.qualityTitle') }}</strong></span>
 					</div>
 				</div>
 				<q-separator
@@ -235,7 +235,7 @@
 					size="3px"
 				/>
 				<p class="text-white">
-					{{ $t('homeView.qualityText') }}
+					{{ $t('adressringzangeView.qualityText') }}
 				</p>
 			</div>
 			<div class="flexbox-item image3 mt-space-2 mb-space-2">
@@ -254,44 +254,44 @@
 </script>
 
 <style lang="scss">
-    @import '../assets/scss/styles.scss';
-    .flex-box{
-        display:flex;
-        background-color: $primary;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: stretch;
+@import '../assets/scss/styles.scss';
+.flex-box{
+  display:flex;
+  background-color: $primary;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
 
-        .flexbox-item{
-            width: 100%;
+  .flexbox-item{
+    width: 100%;
 
-            @include bp(l){
-                width: 50%;
-                height: 20%;
-              margin-top: $pad*3.5;
-            }
-            .item-title{
-                font-size: 22px;
-                color: white;
-            }
-
-        }
+    @include bp(l){
+      width: 50%;
+      height: 20%;
+      margin-top: $pad*3.5;
     }
-    .seperator-ml{
-        margin-left: 0px;
+    .item-title{
+      font-size: 22px;
+      color: white;
     }
-    .q-separator {
-    width: 100px;
+
+  }
+}
+.seperator-ml{
+  margin-left: 0px;
+}
+.q-separator {
+  width: 100px;
 }
 
 .image{
-    width: 100%;
+  width: 100%;
 }
 .margin-left-icon{
-    margin-left: 5px;
-    @include bp(l){
-        margin-left: 10px;
-    }
+  margin-left: 5px;
+  @include bp(l){
+    margin-left: 10px;
+  }
 }
 </style>

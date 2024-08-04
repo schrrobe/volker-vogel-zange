@@ -1,39 +1,39 @@
 <template>
-  <div
-      class="page-overlay"
-      :class="{
-      'page-overlay--full': full,
-    }"
-      @mousedown="handleClick"
-  >
-    <slot />
-  </div>
+	<div
+		class="page-overlay"
+		:class="{
+			'page-overlay--full': full,
+		}"
+		@mousedown="handleClick"
+	>
+		<slot />
+	</div>
 </template>
 
 <script>
 export default {
-  name: 'PageOverlay',
-  props: {
+	name: 'PageOverlay',
+	props: {
 
-    full: {
-      type: Boolean,
-    },
+		full: {
+			type: Boolean,
+		},
 
-  },
-  mounted() {
-    document.body.classList.add('no-scrolling');
-  },
-  unmounted() {
-    document.body.classList.remove('no-scrolling');
-  },
-  methods: {
-    handleClick(event) {
-      if (event.target !== this.$el) {
-        return;
-      }
-      this.$emit('click', event);
-    },
-  },
+	},
+	mounted() {
+		document.body.classList.add('no-scrolling');
+	},
+	unmounted() {
+		document.body.classList.remove('no-scrolling');
+	},
+	methods: {
+		handleClick(event) {
+			if (event.target !== this.$el) {
+				return;
+			}
+			this.$emit('click', event);
+		},
+	},
 };
 </script>
 

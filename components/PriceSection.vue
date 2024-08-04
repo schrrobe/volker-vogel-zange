@@ -1,7 +1,9 @@
 <template>
 	<div class="row items-center show-desktop">
 		<div class="col-7">
-			<h1 class="headline">{{ t('homeView.headerTong') }}</h1>
+			<h1 class="headline">
+				<slot />
+			</h1>
 			<div class="text-right q-pr-xl q-mb-xl">
 				<span class="price">
 					<span v-if="isDollar">$</span> 140 <span v-if="!isDollar">€</span>
@@ -30,36 +32,38 @@
 			class="col-5"
 			style="margin: auto"
 		>
-      <client-only>
-        <lazy-nuxt-img
-            src="/Beringungszange.png"
-            width="433px"
-        />
-      </client-only>
+			<client-only>
+				<lazy-nuxt-img
+					src="/Beringungszange.png"
+					width="433px"
+				/>
+			</client-only>
 		</div>
 	</div>
 
 	<section class="section-a show-mobile">
 		<div>
 			<div>
-        <h1 class="headline">{{ t('homeView.headerTong') }}</h1>
+				<h1 class="headline">
+					{{ t('homeView.headerTong') }}
+				</h1>
 				<div class="row justify-center">
-          <client-only>
-            <lazy-nuxt-img src="/Beringungszange.png" />
-          </client-only>
+					<client-only>
+						<lazy-nuxt-img src="/Beringungszange.png" />
+					</client-only>
 				</div>
 				<div class="row justify-center">
 					<span class="price">
 						<span v-if="isDollar">$</span> 140 <span v-if="!isDollar">€</span>
 					</span>
-          <span class="q-ml-md">{{ t('homeView.shipping') }}</span>
+					<span class="q-ml-md">{{ t('homeView.shipping') }}</span>
 				</div>
 				<div class="row justify-around q-mt-lg">
 					<div class="col-5">
 						<q-btn
 							class="q-mr-md"
 							color="primary"
-              :label="t('homeView.btnMail')"
+							:label="t('homeView.btnMail')"
 							href="mailto:v.juengling@-t-online.de"
 						/>
 					</div>

@@ -2,7 +2,7 @@
 	<div class="container-flex">
 		<div class="q-mt-xl">
 			<h2>
-				{{ $t('homeView.iconBoxTitle') }}
+				<slot />
 			</h2>
 			<hr>
 		</div>
@@ -30,26 +30,10 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
-
-const { t } = useI18n();
-
-const iconBoxes = [
-	{
-		icon: 'plumbing',
-		text: t('homeView.iconBox.ringSize'),
+defineProps({
+	iconBoxes: {
+		type: Array,
+		default: () => [],
 	},
-	{
-		icon: 'close',
-		text: t('homeView.iconBox.ringDestruction'),
-	},
-	{
-		icon: 'thumb_up',
-		text: t('homeView.iconBox.easyHandling'),
-	},
-	{
-		icon: 'handyman',
-		text: t('homeView.iconBox.quality'),
-	},
-];
+});
 </script>

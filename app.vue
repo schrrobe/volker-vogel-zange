@@ -3,36 +3,44 @@
     <NuxtWelcome />
   </div> -->
 	<div :class="textAlignmentClass">
-    <Html :lang="htmlAttrs.lang" :dir="htmlAttrs.dir"/>
+		<Html
+			:lang="htmlAttrs.lang"
+			:dir="htmlAttrs.dir"
+		/>
 		<HeaderSection />
-        <page-overlay v-if="showCookieModal">
-          <VzModal medium :closable="false">
-            <h4 style="padding: 0; margin: 20px 0 40px 0">{{ t('cookieBox.headline') }}</h4>
-            <p>{{t('cookieBox.text')}}</p>
-            <div class="row justify-center">
-              <div class="col-12 co-md-6 justify-center">
-                <q-btn
-                    style="width: 100%"
-                    class="q-y-lg q-px-md q-my-xs"
-                    size="100%"
-                    color="positive"
-                    :label="t('cookieBox.buttonFirst')"
-                    @click="setCookie('beringungszangeCookieBar', 'true', 30 )"
-                />
-              </div>
-              <div class="col-12 co-md-6 justify-center">
-                <q-btn
-                    style="width: 100%"
-                    class="q-y-lg q-px-md q-my-xs"
-                    size="100%"
-                    color="negative"
-                    :label="t('cookieBox.buttonSecond')"
-                    @click="showCookieModal = false"
-                />
-              </div>
-            </div>
-          </VzModal>
-        </page-overlay>
+		<page-overlay v-if="showCookieModal">
+			<VzModal
+				medium
+				:closable="false"
+			>
+				<h4 style="padding: 0; margin: 20px 0 40px 0">
+					{{ t('cookieBox.headline') }}
+				</h4>
+				<p>{{ t('cookieBox.text') }}</p>
+				<div class="row justify-center">
+					<div class="col-12 co-md-6 justify-center">
+						<q-btn
+							style="width: 100%"
+							class="q-y-lg q-px-md q-my-xs"
+							size="100%"
+							color="positive"
+							:label="t('cookieBox.buttonFirst')"
+							@click="setCookie('beringungszangeCookieBar', 'true', 30)"
+						/>
+					</div>
+					<div class="col-12 co-md-6 justify-center">
+						<q-btn
+							style="width: 100%"
+							class="q-y-lg q-px-md q-my-xs"
+							size="100%"
+							color="negative"
+							:label="t('cookieBox.buttonSecond')"
+							@click="showCookieModal = false"
+						/>
+					</div>
+				</div>
+			</VzModal>
+		</page-overlay>
 		<NuxtPage />
 		<FooterSection />
 	</div>
@@ -41,17 +49,18 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 import { computed, ref } from 'vue';
-const { gtag, initialize } = useGtag()
 import HeaderSection from '~/components/HeaderSection.vue';
 import FooterSection from '~/components/FooterSection.vue';
-import PageOverlay from  '~/components/PageOverlay/PageOverlay.vue'
-import VzModal from "~/components/modal/VzModal.vue";
+import PageOverlay from '~/components/PageOverlay/PageOverlay.vue';
+import VzModal from '~/components/modal/VzModal.vue';
+
+const { gtag, initialize } = useGtag();
 
 const route = useRoute();
 
-const showCookieModal = ref(false)
+const showCookieModal = ref(false);
 
-const isProd = process.client ? window.location.host === 'beringungszange.de' : false;
+const isProd = import.meta.client ? window.location.host === 'beringungszange.de' : false;
 
 const windowWidth = ref(0);
 const { t } = useI18n();
@@ -74,42 +83,42 @@ const seoDescription = computed(() => {
 });
 
 function setCookie(name, value, days) {
-  const date = new Date();
-  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-  const expires = "expires=" + date.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/";
-  if(isProd){
-    initialize();
-  }
-  showCookieModal.value = false;
+	const date = new Date();
+	date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+	const expires = 'expires=' + date.toUTCString();
+	document.cookie = name + '=' + value + ';' + expires + ';path=/';
+	if (isProd) {
+		initialize();
+	}
+	showCookieModal.value = false;
 }
 
 function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-  return null;
+	const value = `; ${document.cookie}`;
+	const parts = value.split(`; ${name}=`);
+	if (parts.length === 2) return parts.pop().split(';').shift();
+	return null;
 }
 
 onMounted(() => {
+	const consent = getCookie('beringungszangeCookieBar');
 
-  const consent = getCookie('beringungszangeCookieBar')
-
-  if(consent ==='true'){
-    showCookieModal.value = false;
-    if(isProd){
-      initialize();
-    }
-  }else{
-    showCookieModal.value = true;
-  }
-})
+	if (consent === 'true') {
+		showCookieModal.value = false;
+		if (isProd) {
+			initialize();
+		}
+	}
+	else {
+		showCookieModal.value = true;
+	}
+});
 
 const head = useLocaleHead({
-  addDirAttribute: true,
-  addSeoAttributes: true,
-})
-const htmlAttrs = computed(() => head.value.htmlAttrs)
+	addDirAttribute: true,
+	addSeoAttributes: true,
+});
+const htmlAttrs = computed(() => head.value.htmlAttrs);
 
 useSeoMeta({
 	title: seoTitle,

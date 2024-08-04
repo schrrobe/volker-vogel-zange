@@ -1,70 +1,70 @@
 <template>
-  <div
-      class="modal"
-      :class="{
-      'modal--full': full,
-    }"
-  >
-    <div
-        v-if="closable"
-        class="m-actions"
-    >
-      <button
-          type="button"
-          class="m-close"
-          @click="$emit('close')"
-      >
-        <q-icon name="cancel"/>
-      </button>
-    </div>
+	<div
+		class="modal"
+		:class="{
+			'modal--full': full,
+		}"
+	>
+		<div
+			v-if="closable"
+			class="m-actions"
+		>
+			<button
+				type="button"
+				class="m-close"
+				@click="$emit('close')"
+			>
+				<q-icon name="cancel" />
+			</button>
+		</div>
 
-    <slot name="beforeContent" />
+		<slot name="beforeContent" />
 
-    <div class="m-content">
-      <slot />
-    </div>
-  </div>
+		<div class="m-content">
+			<slot />
+		</div>
+	</div>
 </template>
 
 <script>
 export default {
-  name: 'VzModal',
-  props: {
+	name: 'VzModal',
+	props: {
 
-    closable: {
-      type: Boolean,
-      default: true,
-    },
+		closable: {
+			type: Boolean,
+			default: true,
+		},
 
-    loading: {
-      type: Boolean,
-    },
+		loading: {
+			type: Boolean,
+		},
 
-    small: {
-      type: Boolean,
-    },
+		small: {
+			type: Boolean,
+		},
 
-    medium: {
-      type: Boolean,
-    },
+		medium: {
+			type: Boolean,
+		},
 
-    large: {
-      type: Boolean,
-    },
+		large: {
+			type: Boolean,
+		},
 
-    full: {
-      type: Boolean,
-    },
+		full: {
+			type: Boolean,
+		},
 
-    fixed: {
-      type: Boolean,
-    },
+		fixed: {
+			type: Boolean,
+		},
 
-    overlay: {
-      type: Boolean,
-    },
+		overlay: {
+			type: Boolean,
+		},
 
-  },
+	},
 };
 </script>
 

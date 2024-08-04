@@ -70,13 +70,13 @@ export default defineNuxtConfig({
 		],
 	},
 	modules: [
-        '@nuxtjs/i18n',
-        'nuxt-quasar-ui',
-        '@nuxt/image',
-        '@nuxt/eslint',
-        "nuxt-gtag",
-        "@nuxtjs/sitemap"
-    ],
+		'@nuxtjs/i18n',
+		'nuxt-quasar-ui',
+		'@nuxt/image',
+		'@nuxt/eslint',
+		'nuxt-gtag',
+		'@nuxtjs/sitemap',
+	],
 	css: [
 		'~/assets/scss/styles.scss',
 	],

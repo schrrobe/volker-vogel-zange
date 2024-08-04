@@ -4,31 +4,48 @@
 			<ContentSection>
 				<div class="row justify-around">
 					<div
-						v-if="isEurope"
 						class="col-xs-12 col-md-3 q-pa-md"
 					>
-						<p class="text-white law-menu-header">
-							<strong>{{ t('lawMenu.lawHead') }}</strong>
-						</p>
-						<ul class="law-menu">
-							<li class="law-menu">
-								<NuxtLink
-									class="text-white"
-									:to="`/${locale}/impressum`"
-								>
-									{{ t('lawMenu.imprint') }}
-								</NuxtLink>
-							</li>
-							<li class="law-menu">
-								<NuxtLink
-									class="text-white"
-									:to="`/${locale}/dsgvo`"
-								>
-									{{ t('lawMenu.consent') }}
-								</NuxtLink>
-							</li>
-						</ul>
+						<div v-if="isEurope">
+							<p class="text-white law-menu-header">
+								<strong>{{ t('lawMenu.lawHead') }}</strong>
+							</p>
+							<ul class="law-menu">
+								<li class="law-menu">
+									<NuxtLink
+										class="text-white"
+										:to="`/${locale}/impressum`"
+									>
+										{{ t('lawMenu.imprint') }}
+									</NuxtLink>
+								</li>
+								<li class="law-menu">
+									<NuxtLink
+										class="text-white"
+										:to="`/${locale}/dsgvo`"
+									>
+										{{ t('lawMenu.consent') }}
+									</NuxtLink>
+								</li>
+							</ul>
+						</div>
+						<div class="q-mt-lg">
+							<p class="text-white law-menu-header">
+								<strong>{{ t('footer.moreLinks') }}</strong>
+							</p>
+							<ul class="law-menu">
+								<li class="law-menu">
+									<NuxtLink
+										class="text-white"
+										:to="`/${locale}/adressringzange`"
+									>
+										{{ t('footer.adressringzange') }}
+									</NuxtLink>
+								</li>
+							</ul>
+						</div>
 					</div>
+
 					<div class="col-xs-12 col-md-3 q-pa-md">
 						<p class="text-white law-menu-header">
 							<strong>{{ t('impressum.contact') }}</strong>
@@ -51,14 +68,16 @@
 						</ul>
 					</div>
 					<div class="col-xs-12 col-md-3 q-pa-md justify-center">
-            <p class="text-white"><strong>{{t('homeView.btnWhatsapp')}}</strong></p>
+						<p class="text-white">
+							<strong>{{ t('homeView.btnWhatsapp') }}</strong>
+						</p>
 						<div class="qr-container rounded-borders">
-              <a href="https://wa.me/4915128803091">
-							<canvas
-								ref="qrcode"
-								class="qrcode"
-							/>
-              </a>
+							<a href="https://wa.me/4915128803091">
+								<canvas
+									ref="qrcode"
+									class="qrcode"
+								/>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -113,8 +132,8 @@ const langs = ref([
 	{ locale: 'ir', text: 'فارسی (Iran)' },
 	{ locale: 'om', text: 'العربية (Oman)' },
 	{ locale: 'bh', text: 'العربية (Bahrain)' },
-  { locale: 'pt', text: 'Português' },
-  { locale: 'cs', text: 'Čeština' },
+	{ locale: 'pt', text: 'Português' },
+	{ locale: 'cs', text: 'Čeština' },
 ]);
 
 const generateQRCode = async () => {

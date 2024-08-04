@@ -53,10 +53,39 @@ export default {
 		imprint: 'Impressum',
 		consent: 'Datenschutzerklärung',
 	},
+	footer: {
+		moreLinks: 'Weitere Links',
+		adressringzange: 'Adressringzange',
+	},
 	cookieBox: {
 		headline: 'Diese Webseite verwendet Cookies',
 		text: 'Wir verarbeiten technische Cookies, die zwingend erforderlich sind, um sich auf der Webseite zu bewegen, grundlegende Funktionen zu nutzen und die Sicherheit der Webseite zu gewährleisten; sie sammeln weder Informationen über Sie zu Marketingzwecken noch speichern sie, welche Webseiten Sie besucht haben. Rechtsgrundlage für Cookies, die unbedingt erforderlich sind, um Ihnen den ausdrücklich gewünschten Dienst zur Verfügung zu stellen, ist § 25 Abs. 2 Nr. 2 TTDSG. Jeder Einsatz von Cookies, der hierfür nicht zwingend technisch erforderlich ist, stellt eine Datenverarbeitung dar, die nur mit einer ausdrücklichen und aktiven Einwilligung Ihrerseits gem. § 25 Abs. 1 TTDSG iVm Art. 6 Abs. 1 S. 1 lit. a DS-GVO erlaubt ist.',
 		buttonFirst: 'Ich akzeptiere alle',
 		buttonSecond: 'Nur essenzielle Cookies akzeptieren',
-	}
+	},
+	adressringzangeView: {
+		headerPriceSection: 'Hochwertige Adressringzange',
+		iconBoxTitle: 'Die Adressringzange ist die optimale Lösung für Ihre Vogelberingung!',
+		iconBox: {
+			ringSize: 'Zwei Ringgrößen in einer Zange - Flexibilität und Vielseitigkeit',
+			noDestruction: 'Keine Beschädigung des Ringes - Schutz und Sicherheit für die Vögel',
+			easyHandling: 'Leichtes Handling durch optimalen Hebel - Komfort und Effizienz',
+			longLife: 'Langlebigkeit und Zuverlässigkeit - Ein Werkzeug für die Ewigkeit',
+		},
+		ringSizeTitle: 'Zwei Ringgrößen in einer Zange - Flexibilität und Vielseitigkeit',
+		ringSizeText: 'Unsere Adressringzange ist einzigartig, da sie zwei Ringgrößen in einem Werkzeug vereint. Dies bietet Ihnen die Flexibilität, verschiedene Greifvögel mit nur einer Zange zu beringen. Die zwei wählbaren Ringgrößen liegen zwischen 15 und 30 mm, was Ihnen ermöglicht, eine Vielzahl von Vogelarten abzudecken.',
+		ringDestructionTitle: 'Keine Beschädigung des Ringes - Schutz und Sicherheit für die Vögel',
+		ringDestructionText: 'Bei der Beringung von Greifvögeln ist es essentiell, dass der Ring nicht beschädigt wird, um die Sicherheit und das Wohl der Vögel zu gewährleisten. Unsere Adressringzangen wurden speziell entwickelt, um den Ring während des Anbringens nicht zu beschädigen. Dies schützt die Vögel und sorgt dafür, dass der Ring fest und sicher sitzt.',
+		easyHandlingTitle: 'Leichtes Handling durch optimalen Hebel - Komfort und Effizienz',
+		easyHandlingText: 'Dank des optimalen Hebels unserer Zangen ist das Handling besonders leicht und effizient. Selbst bei längerem Einsatz bleibt die Bedienung komfortabel und erfordert nur minimalen Kraftaufwand. Dies ist besonders wichtig, um die Belastung für Ihre Hände und Handgelenke zu reduzieren und ein ermüdungsfreies Arbeiten zu ermöglichen.',
+		qualityTitle: 'Zwei wählbare Ringgrößen zwischen 15 und 30 mm - Vielseitigkeit in der Anwendung',
+		qualityText: 'Unsere Adressringzange bietet Ihnen die Möglichkeit, zwischen zwei Ringgrößen zu wählen, die beide zwischen 15 und 30 mm liegen. Diese Flexibilität ermöglicht es Ihnen, eine breite Palette von Greifvögeln mit nur einem Werkzeug zu beringen, was sowohl Zeit als auch Kosten spart.',
+		madeInGermanyTitle: 'Made in Germany',
+		madeInGermanyText: 'Unsere Adressringzangen werden mit größter Sorgfalt in Deutschland hergestellt. Made in Germany steht weltweit für höchste Qualität und Zuverlässigkeit, und unsere Zangen sind keine Ausnahme. Jedes Stück wird in Handfertigung gefertigt und durchläuft strenge Qualitätskontrollen, um sicherzustellen, dass es den höchsten Standards entspricht.',
+		handMadeTitle: 'Handfertigung - Präzision und Liebe zum Detail',
+		handMadeText: 'Wir setzen auf Handfertigung, weil wir wissen, dass echte Handwerkskunst durch nichts zu ersetzen ist. Jede Adressringzange wird von erfahrenen Fachleuten mit größter Präzision und Liebe zum Detail hergestellt. Dadurch können wir sicherstellen, dass jede Zange perfekt funktioniert und eine lange Lebensdauer hat.',
+		benefitsTitle: 'Unsere Adressringzange ist Ideal für Falknerei und Ornithologie',
+		benefitsIntro: 'Unsere Adressringzange wurde speziell für die Anforderungen der Falknerei und der ornithologischen Vogelberingung entwickelt. Sie eignet sich für Falkner, die ihre Greifvögel markieren, ebenso wie für Ornithologen, die Vögel in der Wildnis erforschen.',
+	},
+
 };

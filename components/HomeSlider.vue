@@ -1,15 +1,15 @@
 <template>
-  <client-only>
-    <div class="row slider justify-center">
-        <div class="col-xs-11 col-md-8 q-pa-xs">
-          <div class="glass-box">
-            <p class="glass-box-title">
-              <strong>{{ $t('homeView.titleHighligted') }}</strong> {{ $t('homeView.title') }}
-            </p>
-          </div>
-        </div>
-    </div>
-  </client-only>
+	<client-only>
+		<div class="row slider justify-center">
+			<div class="col-xs-11 col-md-8 q-pa-xs">
+				<div class="glass-box">
+					<p class="glass-box-title">
+						<slot />
+					</p>
+				</div>
+			</div>
+		</div>
+	</client-only>
 </template>
 
 <script setup>
@@ -79,8 +79,6 @@
     }
   }
 }
-
-
 
 .glass-box {
   padding: $pad $pad * 2;

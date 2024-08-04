@@ -2,11 +2,11 @@
 	<div class="container-flex">
 		<div class="q-mt-xl">
 			<h2>
-				{{ $t('homeView.benefitsTitle') }}
+				<slot name="title" />
 			</h2>
 			<hr>
 			<p class="mt-space-2">
-				{{ $t('homeView.benefitsIntro') }}
+				<slot name="intro" />
 			</p>
 		</div>
 		<div
@@ -35,23 +35,12 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
-
-const { t } = useI18n();
-
-const iconBoxes = [
-	{
-		icon: 'trip_origin',
-		title: t('homeView.flexibilityTitle'),
-		text: t('homeView.flexibilityText'),
+defineProps({
+	iconBoxes: {
+		type: Array,
+		default: () => [],
 	},
-	{
-		icon: 'done',
-		title: t('homeView.durabilityTitle'),
-		text: t('homeView.durabilityText'),
-	},
-
-];
+});
 </script>
 
 <style scoped lang="scss">
