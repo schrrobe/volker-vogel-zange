@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Alicates para anilhamento de aves para anéis de endereços',
 		description: 'Alicates para anilhamento de aves: Ideal para anéis de endereços com diâmetro de 15 mm a 30 mm. Produção manual, precisa e robusta, perfeita para falcoaria e ornitologia.',
+		adressringzangeTitle: 'Alicate de Anilhas de Endereço de Alta Qualidade para Falcoaria',
+		adressringzangeDescription: 'Alicate de Anilhas de Endereço de Alta Qualidade: Ideal para anilhas de endereço de Ø 15mm a Ø 30mm. Feito à mão, preciso e robusto, perfeito para falcoaria e ornitologia.',
 	},
 	impressum: {
 		header: 'Impressum',

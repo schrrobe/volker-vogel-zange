@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Ringtangen voor adresringen',
 		description: 'Vogeltangen: Ideaal voor adresringen van Ø 15 mm tot Ø 30 mm. Handgemaakt, precies en robuust, perfect voor valkerij en ornithologie.',
+		adressringzangeTitle: 'Hoogwaardige Adresringtang voor Valkeniers',
+		adressringzangeDescription: 'Hoogwaardige Adresringtang: Ideaal voor adresringen van Ø 15mm tot Ø 30mm. Handgemaakt, nauwkeurig en robuust, perfect voor valkerij en ornithologie.',
 	},
 	impressum: {
 		header: 'Impressum',

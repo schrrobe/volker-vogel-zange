@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Szczypce do obrączek adresowych',
 		description: 'Szczypce do obrączkowania ptaków: Idealne do obrączek adresowych od Ø 15mm do Ø 30mm. Ręcznie wykonane, precyzyjne i solidne, idealne do sokolnictwa i ornitologii.',
+		adressringzangeTitle: 'Wysokiej jakości szczypce do obrączek adresowych dla sokolnictwa',
+		adressringzangeDescription: 'Wysokiej jakości szczypce do obrączek adresowych: Idealne do obrączek adresowych o średnicy od 15mm do 30mm. Ręcznie wykonane, precyzyjne i wytrzymałe, doskonałe do sokolnictwa i ornitologii.',
 	},
 	impressum: {
 		header: 'Impressum',

@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'アドレスリング用バンディングプライヤー',
 		description: '鳥のバンディングプライヤー：Ø 15mmからØ 30mmまでのアドレスリングに最適。手作り、精密で頑丈、鷹狩りと鳥類学に最適。',
+		adressringzangeTitle: '高品質のアドレスリングペンチ（鷹狩用）',
+		adressringzangeDescription: '高品質のアドレスリングペンチ: Ø15mmからØ30mmのアドレスリングに最適。手作り、精密、頑丈で、鷹狩りや鳥類学に最適。',
 	},
 	footer: {
 		moreLinks: 'その他のリンク',

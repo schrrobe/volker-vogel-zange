@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Kleště na kroužkování ptáků pro adresní kroužky',
 		description: 'Kleště na kroužkování ptáků: Ideální pro adresní kroužky o průměru 15 mm až 30 mm. Ruční výroba, precizní a robustní, perfektní pro sokolnictví a ornitologii.',
+		adressringzangeTitle: 'Vysoce kvalitní kleště na adresní kroužky pro sokolnictví',
+		adressringzangeDescription: 'Vysoce kvalitní kleště na adresní kroužky: Ideální pro adresní kroužky o průměru 15 mm až 30 mm. Ručně vyrobené, přesné a robustní, perfektní pro sokolnictví a ornitologii.',
 	},
 	impressum: {
 		header: 'Impressum',

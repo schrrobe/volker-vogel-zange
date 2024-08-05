@@ -74,13 +74,22 @@ const { locale } = useI18n();
 const textAlignmentClass = computed(() => {
 	return ['ar', 'ae', 'qa', 'ir', 'om', 'bh'].includes(locale.value) ? 'text-right' : 'text-left';
 });
-const seoTitle = computed(() => {
-	return t('seo.title');
-});
 
-const seoDescription = computed(() => {
-	return t('seo.description');
-});
+function setSeoTitle(routePath) {
+	const titleMap = new Map([
+		[`/${locale.value}`, t('seo.title')],
+		[`/${locale.value}/adressringzange`, t('seo.adressringzangeTitle')],
+	]);
+	return titleMap.get(routePath);
+}
+
+function setSeoDescription(routePath) {
+	const titleMap = new Map([
+		[`/${locale.value}`, t('seo.description')],
+		[`/${locale.value}/adressringzange`, t('seo.adressringzangeDescription')],
+	]);
+	return titleMap.get(routePath);
+}
 
 function setCookie(name, value, days) {
 	const date = new Date();
@@ -121,12 +130,17 @@ const head = useLocaleHead({
 const htmlAttrs = computed(() => head.value.htmlAttrs);
 
 useSeoMeta({
-	title: seoTitle,
-	ogTitle: seoDescription,
-	description: seoDescription,
-	ogDescription: seoDescription,
+	title: setSeoTitle(route.path),
+	description: setSeoDescription(route.path),
+	ogTitle: setSeoTitle(route.path),
+	ogDescription: setSeoDescription(route.path),
 	ogImage: imageSrc,
+	ogType: 'website',
+	ogLocale: locale.value,
+	ogLocaleAlternate: locale,
+	ogUrl: `beringungszange.de${route.path}`,
+	ogSiteName: 'beringungszange.de',
 	twitterCard: 'https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp',
-	robots: route.name.includes('index') ? 'index' : 'noindex',
+	robots: route.name.includes('index') || route.name.includes('adressringzange') ? 'index' : 'noindex',
 });
 </script>

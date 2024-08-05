@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Banding Pliers for Address Rings',
 		description: 'Bird banding pliers: Ideal for address rings from Ø 15mm to Ø 30mm. Handcrafted, precise, and robust, perfect for falconry and ornithology.',
+		adressringzangeTitle: 'High-Quality Address Ring Pliers for Falconry',
+		adressringzangeDescription: 'High-Quality Address Ring Pliers: Ideal for address rings with a diameter of 15mm to 30mm. Handcrafted, precise, and robust, perfect for falconry and ornithology.',
 	},
 	impressum: {
 		header: 'Impressum',

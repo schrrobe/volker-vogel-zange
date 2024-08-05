@@ -31,7 +31,8 @@ export default {
 	seo: {
 		title: 'Beringungszange für Adressringe',
 		description: 'Vogelberingungszange: Ideal für Adressringe von Ø 15mm bis Ø 30mm. Handgefertigt, präzise und robust, perfekt für Falknerei und Ornithologie.',
-
+		adressringzangeTitle: 'Hochwertige Adressringzange für die Falknerei',
+		adressringzangeDescription: 'Hochwertige Adressringzange: Ideal für Adressringe von Ø 15mm bis Ø 30mm. Handgefertigt, präzise und robust, perfekt für Falknerei und Ornithologie.',
 	},
 	impressum: {
 		header: 'Impressum',

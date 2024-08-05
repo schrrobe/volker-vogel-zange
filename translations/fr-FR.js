@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Pinces de baguage pour anneaux d\'adresse',
 		description: 'Pinces de baguage des oiseaux : Idéales pour les anneaux d\'adresse de Ø 15mm à Ø 30mm. Artisanales, précises et robustes, parfaites pour la fauconnerie et l\'ornithologie.',
+		adressringzangeTitle: 'Pince à bagues de haute qualité pour la fauconnerie',
+		adressringzangeDescription: 'Pince à bagues de haute qualité : Idéale pour les bagues d\'adresse de Ø 15mm à Ø 30mm. Faite à la main, précise et robuste, parfaite pour la fauconnerie et l\'ornithologie.',
 	},
 	impressum: {
 		header: 'Impressum',

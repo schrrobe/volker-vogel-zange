@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Alicates de anillamiento para anillos de dirección',
 		description: 'Alicates de anillamiento de aves: Ideales para anillos de dirección de Ø 15mm a Ø 30mm. Artesanales, precisos y robustos, perfectos para cetrería y ornitología.',
+		adressringzangeTitle: 'Alicate de Anillas de Dirección de Alta Calidad para Cetrería',
+		adressringzangeDescription: 'Alicate de Anillas de Dirección de Alta Calidad: Ideal para anillas de dirección de Ø 15mm a Ø 30mm. Hecho a mano, preciso y robusto, perfecto para cetrería y ornitología.',
 	},
 	impressum: {
 		header: 'Impressum',

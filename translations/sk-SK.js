@@ -31,6 +31,8 @@ export default {
 	seo: {
 		title: 'Kliešte na adresné krúžky',
 		description: 'Kliešte na krúžkovanie vtákov: Ideálne pre adresné krúžky s priemerom od Ø 15 mm do Ø 30 mm. Ručne vyrobené, presné a robustné, ideálne pre sokoliarstvo a ornitológiu.',
+		adressringzangeTitle: 'Vysoko kvalitné kliešte na adresné krúžky pre sokoliarstvo',
+		adressringzangeDescription: 'Vysoko kvalitné kliešte na adresné krúžky: Ideálne pre adresné krúžky s priemerom od 15mm do 30mm. Ručne vyrobené, presné a robustné, perfektné pre sokoliarstvo a ornitológiu.',
 	},
 	impressum: {
 		header: 'Impressum',
