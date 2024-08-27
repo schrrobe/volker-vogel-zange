@@ -26,7 +26,7 @@
 				</div>
 			</div>
 
-      <video width="100%"  autoplay muted loop class="show-mobile">
+      <video width="100%" muted loop playsinline class="show-mobile">
         <source src="/fertigung.mov" type="video/mp4">
         Dein Browser unterstützt das Video-Tag nicht.
       </video>
