@@ -25,7 +25,14 @@
 					<h3>{{ iconBox.text }}</h3>
 				</div>
 			</div>
-		</div>
+
+      <video width="100%"  autoplay muted loop class="show-mobile">
+        <source src="/fertigung.mov" type="video/mp4">
+        Dein Browser unterstützt das Video-Tag nicht.
+      </video>
+
+
+    </div>
 	</div>
 </template>
 
