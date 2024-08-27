@@ -27,7 +27,7 @@
 			</div>
 
       <div class="row justify-center">
-        <video width="95%" autoplay muted loop controls class="show-mobile">
+        <video width="95%" muted loop controls class="show-mobile">
           <source src="/fertigung.mov" type="video/mp4">
           Dein Browser unterstützt das Video-Tag nicht.
         </video>
