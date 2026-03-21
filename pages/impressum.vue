@@ -1,42 +1,69 @@
 <template>
-	<div>
-		<ContentLayout>
-			<ContentSection>
-				<h1 class="h1-impressum">
+	<div class="py-12 md:py-20">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+			<article>
+				<h1 class="text-3xl md:text-4xl font-bold text-foreground mb-2">
 					{{ t('impressum.header') }}
 				</h1>
-				<h2 class="impressum">
+				<p class="text-muted-foreground mb-8">
 					{{ t('impressum.subHeader') }}
-				</h2>
-				<p>
-					Volker Jüngling<br>
-					Vormbrockweg 1c<br>
-					44149 Dortmund<br>
-					{{ t('impressum.tel') }} +49 (0) 231 2217134<br>
-					{{ t('impressum.mobil') }} +49 (0) 151 - 28803091<br>
-					{{ t('impressum.mail') }} v.juengling@-t-online.de
 				</p>
 
-				<h2 class="impressum">
+				<Separator class="mb-8" />
+
+				<address class="not-italic space-y-1 text-foreground mb-10">
+					<p class="font-semibold">Volker Jüngling</p>
+					<p>Vormbrockweg 1c</p>
+					<p>44149 Dortmund</p>
+					<p>{{ t('impressum.tel') }} +49 (0) 231 2217134</p>
+					<p>{{ t('impressum.mobil') }} +49 (0) 151 - 28803091</p>
+					<p>
+						{{ t('impressum.mail') }}
+						<a href="mailto:v.juengling@t-online.de" class="text-primary hover:underline">
+							v.juengling@t-online.de
+						</a>
+					</p>
+				</address>
+
+				<h2 class="text-2xl font-semibold text-foreground mb-4">
 					{{ t('impressum.contact') }}
 				</h2>
-				{{ t('impressum.contact') }} Volker Jüngling <br>
-				{{ t('impressum.mobil') }} +49 (0) 151 288 030 91<br>
-				{{ t('impressum.mail') }} v.juengling@-t-online.de
-				<h2 class="impressum">
+				<div class="space-y-1 text-foreground mb-10">
+					<p>{{ t('impressum.contactPerson') }} Volker Jüngling</p>
+					<p>{{ t('impressum.mobil') }} +49 (0) 151 288 030 91</p>
+					<p>
+						{{ t('impressum.mail') }}
+						<a href="mailto:v.juengling@t-online.de" class="text-primary hover:underline">
+							v.juengling@t-online.de
+						</a>
+					</p>
+				</div>
+
+				<h2 class="text-2xl font-semibold text-foreground mb-4">
 					{{ t('impressum.consumerPoint') }}
 				</h2>
-				<p>{{ t('impressum.consumerPointText') }}</p>
-				<p>{{ t('impressum.src') }} <a href="https://www.e-recht24.de">e-recht24.de</a></p>
-			</ContentSection>
-		</ContentLayout>
+				<p class="text-muted-foreground mb-6 leading-relaxed">
+					{{ t('impressum.consumerPointText') }}
+				</p>
+				<p class="text-sm text-muted-foreground">
+					{{ t('impressum.src') }}
+					<a
+						href="https://www.e-recht24.de"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-primary hover:underline"
+					>
+						e-recht24.de
+					</a>
+				</p>
+			</article>
+		</div>
 	</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import ContentLayout from '../components/ContentLayout.vue';
-import ContentSection from '../components/ContentSection.vue';
+import { Separator } from '~/components/ui/separator';
 
 const { t } = useI18n();
 
@@ -44,7 +71,3 @@ useSeoMeta({
 	robots: 'noindex',
 });
 </script>
-
-<style lang="scss">
-@import '../assets/scss/styles.scss';
-</style>

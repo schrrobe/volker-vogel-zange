@@ -1,20 +1,26 @@
 <template>
-	<ContentLayout>
-		<ContentSection>
+	<div class="py-12 md:py-20">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 prose prose-gray max-w-none
+			[&_h1]:text-3xl [&_h1]:md:text-4xl [&_h1]:font-bold [&_h1]:text-foreground [&_h1]:mb-6
+			[&_h2]:text-xl [&_h2]:md:text-2xl [&_h2]:font-semibold [&_h2]:text-foreground [&_h2]:mt-10 [&_h2]:mb-4
+			[&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:mt-6 [&_h3]:mb-3 [&_h3]:text-left
+			[&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4
+			[&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ul]:text-muted-foreground [&_ul]:space-y-2
+			[&_a]:text-primary [&_a]:hover:underline
+		">
 			<div>
-				<h1 class="impressum">
+				<h1>
 					Datenschutzerklärung
 				</h1>
 				<h2
 					id="m716"
-					class="impressum"
 				>
 					Präambel
 				</h2>
 				<p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als "Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als "Onlineangebot").</p>
 				<p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
 
-				<p>Stand: 9. Juli 2024</p><h2 class="impressum">
+				<p>Stand: 9. Juli 2024</p><h2 class="">
 					Inhaltsübersicht
 				</h2> <ul class="index">
 					<li>
@@ -85,7 +91,7 @@
 					</li>
 				</ul><h2
 					id="m3"
-					class="impressum"
+					class=""
 				>
 					Verantwortlicher
 				</h2><p>Volker Jüngling <br>Vormbrockweg 1c<br>44149, Dortmund, Deutschland</p>
@@ -93,19 +99,19 @@
 
 				<h2
 					id="mOverview"
-					class="impressum"
+					class=""
 				>
 					Übersicht der Verarbeitungen
-				</h2><p>Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.</p><h3 class="text-left">
+				</h2><p>Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.</p><h3 class="">
 					Arten der verarbeiteten Daten
 				</h3>
-				<ul><li>Bestandsdaten.</li><li>Kontaktdaten.</li><li>Inhaltsdaten.</li><li>Nutzungsdaten.</li><li>Meta-, Kommunikations- und Verfahrensdaten.</li><li>Protokolldaten.</li></ul><h3 class="text-left">
+				<ul><li>Bestandsdaten.</li><li>Kontaktdaten.</li><li>Inhaltsdaten.</li><li>Nutzungsdaten.</li><li>Meta-, Kommunikations- und Verfahrensdaten.</li><li>Protokolldaten.</li></ul><h3 class="">
 					Kategorien betroffener Personen
-				</h3><ul><li>Kommunikationspartner.</li><li>Nutzer.</li></ul><h3 class="text-left">
+				</h3><ul><li>Kommunikationspartner.</li><li>Nutzer.</li></ul><h3 class="">
 					Zwecke der Verarbeitung
 				</h3><ul><li>Kommunikation.</li><li>Sicherheitsmaßnahmen.</li><li>Organisations- und Verwaltungsverfahren.</li><li>Feedback.</li><li>Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.</li><li>Informationstechnische Infrastruktur.</li></ul><h2
 					id="m2427"
-					class="text-left"
+					class=""
 				>
 					Maßgebliche Rechtsgrundlagen
 				</h2><p><strong>Maßgebliche Rechtsgrundlagen nach der DSGVO: </strong>Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten ferner im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese in der Datenschutzerklärung mit.</p>
@@ -113,7 +119,7 @@
 
 				<h2
 					id="m27"
-					class="impressum"
+					class=""
 				>
 					Sicherheitsmaßnahmen
 				</h2><p>Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.</p>
@@ -122,14 +128,14 @@
 
 				<h2
 					id="m25"
-					class="impressum"
+					class=""
 				>
 					Übermittlung von personenbezogenen Daten
 				</h2><p>Im Rahmen unserer Verarbeitung von personenbezogenen Daten kommt es vor, dass diese an andere Stellen, Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen übermittelt beziehungsweise ihnen gegenüber offengelegt werden. Zu den Empfängern dieser Daten können z. B. mit IT-Aufgaben beauftragte Dienstleister gehören oder Anbieter von Diensten und Inhalten, die in eine Website eingebunden sind. In solchen Fällen beachten wir die gesetzlichen Vorgaben und schließen insbesondere entsprechende Verträge bzw. Vereinbarungen, die dem Schutz Ihrer Daten dienen, mit den Empfängern Ihrer Daten ab.</p>
 
 				<h2
 					id="m24"
-					class="impressum"
+					class=""
 				>
 					Internationale Datentransfers
 				</h2><p>
@@ -147,7 +153,7 @@
 
 				<h2
 					id="m12"
-					class="impressum"
+					class=""
 				>
 					Allgemeine Informationen zur Datenspeicherung und Löschung
 				</h2><p>Wir löschen personenbezogene Daten, die wir verarbeiten, gemäß den gesetzlichen Bestimmungen, sobald die zugrundeliegenden Einwilligungen widerrufen werden oder keine weiteren rechtlichen Grundlagen für die Verarbeitung bestehen. Dies betrifft Fälle, in denen der ursprüngliche Verarbeitungszweck entfällt oder die Daten nicht mehr benötigt werden. Ausnahmen von dieser Regelung bestehen, wenn gesetzliche Pflichten oder besondere Interessen eine längere Aufbewahrung oder Archivierung der Daten erfordern.</p>
@@ -161,14 +167,14 @@
 				</ul>
 				<h2
 					id="m10"
-					class="impressum"
+					class=""
 				>
 					Rechte der betroffenen Personen
 				</h2><p>Rechte der betroffenen Personen aus der DSGVO: Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:</p><ul><li><strong>Widerspruchsrecht: Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling. Werden die Sie betreffenden personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen; dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht.</strong></li><li><strong>Widerrufsrecht bei Einwilligungen:</strong> Sie haben das Recht, erteilte Einwilligungen jederzeit zu widerrufen.</li><li><strong>Auskunftsrecht:</strong> Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend den gesetzlichen Vorgaben.</li><li><strong>Recht auf Berichtigung:</strong> Sie haben entsprechend den gesetzlichen Vorgaben das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen.</li><li><strong>Recht auf Löschung und Einschränkung der Verarbeitung:</strong> Sie haben nach Maßgabe der gesetzlichen Vorgaben das Recht, zu verlangen, dass Sie betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe der gesetzlichen Vorgaben eine Einschränkung der Verarbeitung der Daten zu verlangen.</li><li><strong>Recht auf Datenübertragbarkeit:</strong> Sie haben das Recht, Sie betreffende Daten, die Sie uns bereitgestellt haben, nach Maßgabe der gesetzlichen Vorgaben in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder deren Übermittlung an einen anderen Verantwortlichen zu fordern.</li><li><strong>Beschwerde bei Aufsichtsbehörde:</strong> Sie haben unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthaltsorts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die Vorgaben der DSGVO verstößt.</li></ul>
 
 				<h2
 					id="m225"
-					class="impressum"
+					class=""
 				>
 					Bereitstellung des Onlineangebots und Webhosting
 				</h2><p>Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte und Funktionen unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu übermitteln.</p>
@@ -181,7 +187,7 @@
 				</ul>
 				<h2
 					id="m134"
-					class="impressum"
+					class=""
 				>
 					Einsatz von Cookies
 				</h2><p>Cookies sind kleine Textdateien bzw. sonstige Speichervermerke, die Informationen auf Endgeräten speichern und aus ihnen auslesen. Zum Beispiel, um den Log-in-Status in einem Nutzerkonto, einen Warenkorbinhalt in einem E-Shop, die aufgerufenen Inhalte oder verwendete Funktionen eines Onlineangebots zu speichern. Cookies können ferner in Bezug auf unterschiedliche Anliegen Einsatz finden, etwa zu Zwecken der Funktionsfähigkeit, der Sicherheit und des Komforts von Onlineangeboten sowie der Erstellung von Analysen der Besucherströme.</p>
@@ -197,7 +203,7 @@
 				</ul>
 				<h2
 					id="m15"
-					class="impressum"
+					class=""
 				>
 					Änderung und Aktualisierung
 				</h2><p>Wir bitten Sie, sich regelmäßig über den Inhalt unserer Datenschutzerklärung zu informieren. Wir passen die Datenschutzerklärung an, sobald die Änderungen der von uns durchgeführten Datenverarbeitungen dies erforderlich machen. Wir informieren Sie, sobald durch die Änderungen eine Mitwirkungshandlung Ihrerseits (z. B. Einwilligung) oder eine sonstige individuelle Benachrichtigung erforderlich wird.</p>
@@ -205,7 +211,7 @@
 
 				<h2
 					id="m42"
-					class="impressum"
+					class=""
 				>
 					Begriffsdefinitionen
 				</h2><p>In diesem Abschnitt erhalten Sie eine Übersicht über die in dieser Datenschutzerklärung verwendeten Begrifflichkeiten. Soweit die Begrifflichkeiten gesetzlich definiert sind, gelten deren gesetzliche Definitionen. Die nachfolgenden Erläuterungen sollen dagegen vor allem dem Verständnis dienen.</p>
@@ -220,15 +226,12 @@
 					>Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke</a>
 				</p>
 			</div>
-		</ContentSection>
-	</ContentLayout>
+		</div>
+	</div>
 </template>
 
 <script setup lang="ts">
-import ContentLayout from '~/components/ContentLayout.vue';
-import ContentSection from '~/components/ContentSection.vue';
+useSeoMeta({
+	robots: 'noindex',
+});
 </script>
-
-<style scoped lang="scss">
-
-</style>

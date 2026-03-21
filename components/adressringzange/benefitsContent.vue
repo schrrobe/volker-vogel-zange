@@ -1,297 +1,124 @@
 <template>
-	<div>
-		<!-- desktop -->
-		<div class="flex-box show-desktop">
-			<div class="flexbox-item q-pr-md">
-				<div class="row items-center q-pr-xl q-mt-xl">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="plumbing"
-							class="q-mr-xs"
-						/>
+	<section class="bg-primary py-16 md:py-24" aria-labelledby="arz-details-heading">
+		<h2 id="arz-details-heading" class="sr-only">{{ $t('adressringzangeView.ringSizeTitle') }}</h2>
+		<div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+			<div class="space-y-16 md:space-y-24">
+				<!-- Feature 1 -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+					<div class="space-y-4">
+						<div class="flex items-center gap-3">
+							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">plumbing</span>
+							<h3 class="text-xl md:text-2xl font-bold text-white">
+								{{ $t('adressringzangeView.ringSizeTitle') }}
+							</h3>
+						</div>
+						<Separator class="w-20 h-0.5 bg-white/40" />
+						<p class="text-white/90 text-base leading-relaxed">
+							{{ $t('adressringzangeView.ringSizeText') }}
+						</p>
 					</div>
-					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringSizeTitle') }}</strong></span>
-					</div>
-				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white q-pr-xl">
-					{{ $t('adressringzangeView.ringSizeText') }}
-				</p>
-			</div>
-			<div class="flexbox-item image">
-				<client-only>
-					<lazy-nuxt-img
-						src="/1.jpg"
-						width="90%"
-						height="400"
-					/>
-				</client-only>
-			</div>
-			<div class="flexbox-item image">
-				<client-only>
-					<lazy-nuxt-img
-						src="/2.jpg"
-						width="90%"
-						height="400"
-					/>
-				</client-only>
-			</div>
-			<div class="flexbox-item q-pl-md ">
-				<div class="row items-center q-pr-xl ">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="close"
-							class="q-mr-xs"
-						/>
-					</div>
-					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringDestructionTitle') }}</strong></span>
+					<div class="rounded-xl overflow-hidden shadow-2xl">
+						<client-only>
+							<lazy-nuxt-img
+								src="/1.jpg"
+								:alt="$t('alt.ringSizesImage')"
+								width="700"
+								height="400"
+								class="w-full h-64 md:h-80 object-cover"
+								loading="lazy"
+							/>
+						</client-only>
 					</div>
 				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white q-pr-xl">
-					{{ $t('adressringzangeView.ringDestructionText') }}
-				</p>
-			</div>
-			<div class="flexbox-item q-pr-md">
-				<div class="row items-center q-pr-xl q-mt-xl">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="thumb_up"
-							class="q-mr-xs"
-						/>
+
+				<!-- Feature 2 -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+					<div class="order-2 lg:order-1 rounded-xl overflow-hidden shadow-2xl">
+						<client-only>
+							<lazy-nuxt-img
+								src="/2.jpg"
+								:alt="$t('alt.noDamageImage')"
+								width="700"
+								height="400"
+								class="w-full h-64 md:h-80 object-cover"
+								loading="lazy"
+							/>
+						</client-only>
 					</div>
-					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.easyHandlingTitle') }}</strong></span>
-					</div>
-				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white q-pr-xl">
-					{{ $t('adressringzangeView.easyHandlingText') }}
-				</p>
-			</div>
-			<div class="flexbox-item image3">
-				<client-only>
-					<lazy-nuxt-img
-						src="/3.jpg"
-						width="90%"
-						height="400"
-					/>
-				</client-only>
-			</div>
-			<div class="flexbox-item image4">
-				<client-only>
-					<lazy-nuxt-img
-						src="/4.jpg"
-						width="90%"
-						height="400"
-					/>
-				</client-only>
-			</div>
-			<div class="flexbox-item q-pl-md">
-				<div class="row items-center q-pr-xl q-mt-xl">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="handyman"
-						/>
-					</div>
-					<div class="col-xs-10">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.qualityTitle') }}</strong></span>
+					<div class="order-1 lg:order-2 space-y-4">
+						<div class="flex items-center gap-3">
+							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">verified</span>
+							<h3 class="text-xl md:text-2xl font-bold text-white">
+								{{ $t('adressringzangeView.ringDestructionTitle') }}
+							</h3>
+						</div>
+						<Separator class="w-20 h-0.5 bg-white/40" />
+						<p class="text-white/90 text-base leading-relaxed">
+							{{ $t('adressringzangeView.ringDestructionText') }}
+						</p>
 					</div>
 				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white q-pr-xl">
-					{{ $t('adressringzangeView.qualityText') }}
-				</p>
+
+				<!-- Feature 3 -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+					<div class="space-y-4">
+						<div class="flex items-center gap-3">
+							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">thumb_up</span>
+							<h3 class="text-xl md:text-2xl font-bold text-white">
+								{{ $t('adressringzangeView.easyHandlingTitle') }}
+							</h3>
+						</div>
+						<Separator class="w-20 h-0.5 bg-white/40" />
+						<p class="text-white/90 text-base leading-relaxed">
+							{{ $t('adressringzangeView.easyHandlingText') }}
+						</p>
+					</div>
+					<div class="rounded-xl overflow-hidden shadow-2xl">
+						<client-only>
+							<lazy-nuxt-img
+								src="/3.jpg"
+								:alt="$t('alt.easyHandlingImage')"
+								width="700"
+								height="400"
+								class="w-full h-64 md:h-80 object-cover"
+								loading="lazy"
+							/>
+						</client-only>
+					</div>
+				</div>
+
+				<!-- Feature 4 -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+					<div class="order-2 lg:order-1 rounded-xl overflow-hidden shadow-2xl">
+						<client-only>
+							<lazy-nuxt-img
+								src="/4.jpg"
+								:alt="$t('alt.qualityImage')"
+								width="700"
+								height="400"
+								class="w-full h-64 md:h-80 object-cover"
+								loading="lazy"
+							/>
+						</client-only>
+					</div>
+					<div class="order-1 lg:order-2 space-y-4">
+						<div class="flex items-center gap-3">
+							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">handyman</span>
+							<h3 class="text-xl md:text-2xl font-bold text-white">
+								{{ $t('adressringzangeView.qualityTitle') }}
+							</h3>
+						</div>
+						<Separator class="w-20 h-0.5 bg-white/40" />
+						<p class="text-white/90 text-base leading-relaxed">
+							{{ $t('adressringzangeView.qualityText') }}
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!-- mobile -->
-		<div class="flex-box show-mobile">
-			<div class="flexbox-item q-pa-xs mt-space-2 mb-space-2">
-				<div class="row items-center">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="plumbing"
-						/>
-					</div>
-					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringSizeTitle') }}</strong></span>
-					</div>
-				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white">
-					{{ $t('adressringzangeView.ringSizeText') }}
-				</p>
-			</div>
-			<div class="flexbox-item image1 mt-space-2 mb-space-2">
-				<client-only>
-					<lazy-nuxt-img
-						class="image"
-						src="/entenberingung-m.jpeg"
-					/>
-				</client-only>
-			</div>
-			<div class="flexbox-item q-pa-xs mt-space-2 mb-space-2">
-				<div class="row items-center">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="close"
-						/>
-					</div>
-					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.ringDestructionTitle') }}</strong></span>
-					</div>
-				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white">
-					{{ $t('adressringzangeView.ringDestructionText') }}
-				</p>
-			</div>
-			<div class="flexbox-item image2 mt-space-2 mb-space-2">
-				<client-only>
-					<lazy-nuxt-img
-						class="image"
-						src="/vogelringzange.jpeg"
-					/>
-				</client-only>
-			</div>
-			<div class="flexbox-item q-pa-xs">
-				<div class="row items-center">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="thumb_up"
-							class="margin-right-icon"
-						/>
-					</div>
-					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.easyHandlingTitle') }}</strong></span>
-					</div>
-				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white">
-					{{ $t('adressringzangeView.easyHandlingText') }}
-				</p>
-			</div>
-			<div class="flexbox-item image3 mt-space-2 mb-space-2">
-				<client-only>
-					<lazy-nuxt-img
-						class="image"
-						src="/greifvogelberingung-m.jpeg"
-					/>
-				</client-only>
-			</div>
-			<div class="flexbox-item image4 mt-space-2 mb-space-2" />
-			<div class="flexbox-item q-pa-xs mt-space-2 mb-space-2">
-				<div class="row items-center">
-					<div class="col-xs-1">
-						<q-icon
-							size="28px"
-							color="white"
-							name="handyman"
-						/>
-					</div>
-					<div class="col-xs-10 margin-left-icon">
-						<span class="text-white item-title"><strong>{{ $t('adressringzangeView.qualityTitle') }}</strong></span>
-					</div>
-				</div>
-				<q-separator
-					color="white q-mt-md q-mb-md seperator-ml"
-					size="3px"
-				/>
-				<p class="text-white">
-					{{ $t('adressringzangeView.qualityText') }}
-				</p>
-			</div>
-			<div class="flexbox-item image3 mt-space-2 mb-space-2">
-				<client-only>
-					<lazy-nuxt-img
-						class="image"
-						src="/g2.jpg"
-					/>
-				</client-only>
-			</div>
-		</div>
-	</div>
+	</section>
 </template>
 
-<script>
+<script setup lang="ts">
+import { Separator } from '~/components/ui/separator';
 </script>
-
-<style lang="scss">
-@import '../assets/scss/styles.scss';
-.flex-box{
-  display:flex;
-  background-color: $primary;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: stretch;
-
-  .flexbox-item{
-    width: 100%;
-
-    @include bp(l){
-      width: 50%;
-      height: 20%;
-      margin-top: $pad*3.5;
-    }
-    .item-title{
-      font-size: 22px;
-      color: white;
-    }
-
-  }
-}
-.seperator-ml{
-  margin-left: 0px;
-}
-.q-separator {
-  width: 100px;
-}
-
-.image{
-  width: 100%;
-}
-.margin-left-icon{
-  margin-left: 5px;
-  @include bp(l){
-    margin-left: 10px;
-  }
-}
-</style>

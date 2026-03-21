@@ -1,61 +1,38 @@
 <template>
-	<client-only>
-		<section style="overflow-x: hidden;">
-			<div class="row justify-center">
-				<div
+	<section class="py-12 md:py-20 bg-muted/30" aria-label="Photo Gallery">
+		<div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+				<figure
 					v-for="img in images"
 					:key="img.src"
-					class="col-md-3 col-xs-12"
+					class="group relative overflow-hidden rounded-xl shadow-md"
 				>
-					<lazy-nuxt-img
-						class="image"
-						:src="img.src"
-						width="100vw"
-						:height="img.height? img.height : '400px'"
-					/>
-				</div>
+					<client-only>
+						<lazy-nuxt-img
+							:src="img.src"
+							:alt="$t(img.altKey)"
+							width="700"
+							height="400"
+							class="w-full h-56 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+							loading="lazy"
+						/>
+					</client-only>
+					<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+				</figure>
 			</div>
-		</section>
-	</client-only>
+		</div>
+	</section>
 </template>
 
 <script setup lang="ts">
 const images = [
-	{
-		src: '/1.jpg',
-		altText: 'Ringzange für Adressringe auf einem Stein mit anderen Falknersachen',
-	},
-	{
-		src: '/g9.jpeg',
-		altText: 'Weimaranerhund und Gerfalke auf einer Wiese',
-	},
-	{
-		src: '/3.jpg',
-		altText: 'Rackelwild wird beringt',
-	},
-	{
-		src: '/4.jpg',
-		altText: 'Adressringzange für Ente ',
-	},
-	{
-		src: '/2.jpg',
-		altText: 'Greifvogel Adressringzange',
-	},
-	{
-		src: '/g6.jpg',
-		altText: 'Adressringzange mit anderen Falknersachen',
-	},
-	{
-		src: '/g7.jpg',
-		altText: 'Ente wird beringt',
-	},
-	{
-		src: '/g8.jpeg',
-		altText: 'Gerfalke jagd KrähenS',
-	},
+	{ src: '/1.jpg', altKey: 'alt.galleryPliers' },
+	{ src: '/g9.jpeg', altKey: 'alt.galleryDogFalcon' },
+	{ src: '/3.jpg', altKey: 'alt.galleryRinging' },
+	{ src: '/4.jpg', altKey: 'alt.galleryDuck' },
+	{ src: '/2.jpg', altKey: 'alt.galleryRaptor' },
+	{ src: '/g6.jpg', altKey: 'alt.galleryEquipment' },
+	{ src: '/g7.jpg', altKey: 'alt.galleryDuckRinging' },
+	{ src: '/g8.jpeg', altKey: 'alt.galleryHunting' },
 ];
 </script>
-
-<style scoped lang="scss">
-@import '../assets/scss/styles.scss';
-</style>
