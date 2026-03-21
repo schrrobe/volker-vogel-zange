@@ -56,6 +56,30 @@
 						e-recht24.de
 					</a>
 				</p>
+
+				<Separator class="my-8" />
+
+				<h2 class="text-2xl font-semibold text-foreground mb-4">
+					Webdesign
+				</h2>
+				<div class="space-y-1 text-foreground">
+					<p>
+						<a
+							href="https://prestige-webdesign.de/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-primary hover:underline"
+						>
+							Prestige Webdesign
+						</a>
+					</p>
+					<p>
+						{{ t('impressum.mail') }}
+						<a href="mailto:info@prestige-webdesign.de" class="text-primary hover:underline">
+							info@prestige-webdesign.de
+						</a>
+					</p>
+				</div>
 			</article>
 		</div>
 	</div>
