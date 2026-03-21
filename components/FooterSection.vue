@@ -111,7 +111,13 @@
 			</nav>
 
 			<p class="text-center text-gray-600 text-xs mt-6">
-				&copy; {{ new Date().getFullYear() }} Volker Jüngling. All rights reserved.
+				&copy; {{ new Date().getFullYear() }}
+				<a
+					href="https://prestige-webdesign.de/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-gray-500 hover:text-white transition-colors"
+				>Prestige Webdesign</a>. All rights reserved.
 			</p>
 		</div>
 	</footer>
