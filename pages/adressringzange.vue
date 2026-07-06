@@ -1,8 +1,7 @@
 <template>
 	<div>
 		<HomeSlider>
-			<strong class="text-primary">{{ $t('homeView.titleHighligted') }}</strong>
-			{{ $t('homeView.title') }}
+			{{ $t('adressringzangeView.heroTitle') }}
 		</HomeSlider>
 		<PriceSection>
 			{{ $t('adressringzangeView.headerPriceSection') }}
@@ -10,7 +9,7 @@
 		<HomeWelcome :icon-boxes="iconBoxes">
 			{{ $t('adressringzangeView.iconBoxTitle') }}
 		</HomeWelcome>
-		<AdressringzangeBenefitsContent />
+		<ProductFeatures ns="adressringzangeView" />
 		<MoreBenefits :icon-boxes="iconBoxesMoreBenefits">
 			<template #title>
 				{{ $t('adressringzangeView.benefitsTitle') }}

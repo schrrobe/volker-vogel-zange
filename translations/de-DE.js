@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Datenschutzerklärung für beringungszange.de. Informationen über Datenverarbeitung, Cookies und Ihre Rechte gemäß DSGVO.',
 	},
 	alt: {
+		gallery: 'Fotogalerie der Beringungszange im Einsatz',
 		productImage: 'Beringungszange für Adressringe - handgefertigt in Deutschland',
 		ringSizesImage: 'Beringungszange mit zwei Ringgrößen auf einem Stein mit Falknereiausrüstung',
 		noDamageImage: 'Adressring wird ohne Beschädigung der Ziffern geschlossen',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Nur essenzielle Cookies akzeptieren',
 	},
 	adressringzangeView: {
+		heroTitle: 'Adressringzange für zwei Ringgrößen – handgefertigt in Deutschland',
 		headerPriceSection: 'Hochwertige Adressringzange',
 		iconBoxTitle: 'Die Adressringzange ist die optimale Lösung für Ihre Vogelberingung!',
 		iconBox: {

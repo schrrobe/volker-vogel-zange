@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Prohlášení o ochraně osobních údajů pro beringungszange.de. Informace o zpracování dat, cookies a vašich právech podle GDPR.',
 	},
 	alt: {
+		gallery: 'Fotogalerie kroužkovacích kleští při používání',
 		productImage: 'Kleště na kroužkování ptáků pro adresní kroužky - ručně vyrobené v Německu',
 		ringSizesImage: 'Kleště na kroužkování se dvěma velikostmi kroužků na kameni se sokolnickým vybavením',
 		noDamageImage: 'Adresní kroužek uzavíraný bez poškození číslic',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Přijmout pouze nezbytné cookies',
 	},
 	adressringzangeView: {
+		heroTitle: 'Kroužkovací kleště pro dvě velikosti kroužků – ručně vyrobené v Německu',
 		headerPriceSection: 'Vysoce kvalitní kleště na kroužkování',
 		iconBoxTitle: 'Kleště na kroužkování jsou optimálním řešením pro vaše kroužkování ptáků!',
 		iconBox: {

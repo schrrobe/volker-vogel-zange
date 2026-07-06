@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Privacybeleid voor beringungszange.de. Informatie over gegevensverwerking, cookies en uw rechten onder de AVG.',
 	},
 	alt: {
+		gallery: 'Fotogalerij van de ringtang in gebruik',
 		productImage: 'Vogelringtang voor adresringen - handgemaakt in Duitsland',
 		ringSizesImage: 'Ringtang met twee ringmaten op een steen met valkerijuitrusting',
 		noDamageImage: 'Adresring wordt gesloten zonder schade aan de cijfers',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Alleen essentiële cookies accepteren',
 	},
 	adressringzangeView: {
+		heroTitle: 'Adresringtang voor twee ringmaten – handgemaakt in Duitsland',
 		headerPriceSection: 'Hoogwaardige adresringtang',
 		iconBoxTitle: 'De adresringtang is de optimale oplossing voor uw vogelringing!',
 		iconBox: {

@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 				{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' },
 				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap' },
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0' },
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block' },
 			],
 		},
 	},
@@ -84,6 +84,8 @@ export default defineNuxtConfig({
 	},
 	image: {
 		domains: ['abriumbi.sirv.com'],
+		format: ['webp'],
+		quality: 70,
 	},
 	eslint: {
 		config: {

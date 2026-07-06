@@ -1,5 +1,8 @@
 <template>
-	<div :class="[isRtl ? 'text-right' : 'text-left']" :dir="htmlAttrs.dir">
+	<div
+		:class="[isRtl ? 'text-right' : 'text-left']"
+		:dir="htmlAttrs.dir"
+	>
 		<Html
 			:lang="htmlAttrs.lang"
 			:dir="htmlAttrs.dir"
@@ -24,7 +27,10 @@
 			>
 				<div class="w-full max-w-lg rounded-xl bg-white p-6 shadow-2xl sm:p-8 animate-in slide-in-from-bottom-4 duration-300">
 					<div class="flex items-center gap-3 mb-4">
-						<span class="material-symbols-outlined text-primary text-2xl" aria-hidden="true">cookie</span>
+						<span
+							class="material-symbols-outlined text-primary text-2xl"
+							aria-hidden="true"
+						>cookie</span>
 						<h2 class="text-xl font-semibold text-foreground">
 							{{ t('cookieBox.headline') }}
 						</h2>
@@ -128,24 +134,28 @@ watch(showCookieModal, async (val) => {
 	}
 });
 
-function setSeoTitle(routePath: string) {
-	const titleMap = new Map([
-		[`/${locale.value}`, t('seo.title')],
-		[`/${locale.value}/adressringzange`, t('seo.adressringzangeTitle')],
-		[`/${locale.value}/impressum`, t('seo.impressumTitle')],
-		[`/${locale.value}/dsgvo`, t('seo.dsgvoTitle')],
-	]);
-	return titleMap.get(routePath);
+// Base route name without the i18n locale suffix (e.g. "adressringzange___de" -> "adressringzange").
+// This is locale-independent, so it also works for the default locale (no path prefix).
+const routeBaseName = computed(() => route.name?.toString().split('___')[0] ?? 'index');
+
+function setSeoTitle() {
+	const titleMap: Record<string, string> = {
+		index: t('seo.title'),
+		adressringzange: t('seo.adressringzangeTitle'),
+		impressum: t('seo.impressumTitle'),
+		dsgvo: t('seo.dsgvoTitle'),
+	};
+	return titleMap[routeBaseName.value] ?? t('seo.title');
 }
 
-function setSeoDescription(routePath: string) {
-	const titleMap = new Map([
-		[`/${locale.value}`, t('seo.description')],
-		[`/${locale.value}/adressringzange`, t('seo.adressringzangeDescription')],
-		[`/${locale.value}/impressum`, t('seo.impressumDescription')],
-		[`/${locale.value}/dsgvo`, t('seo.dsgvoDescription')],
-	]);
-	return titleMap.get(routePath);
+function setSeoDescription() {
+	const descriptionMap: Record<string, string> = {
+		index: t('seo.description'),
+		adressringzange: t('seo.adressringzangeDescription'),
+		impressum: t('seo.impressumDescription'),
+		dsgvo: t('seo.dsgvoDescription'),
+	};
+	return descriptionMap[routeBaseName.value] ?? t('seo.description');
 }
 
 function setCookie(name: string, value: string, days: number) {
@@ -185,75 +195,48 @@ const head = useLocaleHead({
 });
 const htmlAttrs = computed(() => head.value.htmlAttrs!);
 
-// Punkt 10: Canonical URL per Sprache
-const canonicalUrl = computed(() => `https://beringungszange.de${route.path}`);
+// Apply the i18n-generated head: hreflang alternates (incl. x-default) and
+// og:locale / og:locale:alternate. Drop i18n's own canonical (it has no trailing
+// slash) so it doesn't conflict with our explicit trailing-slash canonical below.
+useHead(() => ({
+	// Drop i18n's og:url – useSeoMeta already sets it (with trailing slash) below.
+	meta: (head.value.meta ?? []).filter(m => m.property !== 'og:url'),
+	link: (head.value.link ?? []).filter(l => l.rel !== 'canonical'),
+}));
+
+// Punkt 10: Canonical URL per Sprache – trailing slash consistent with sitemap/site config.
+const canonicalUrl = computed(() => {
+	const path = route.path.endsWith('/') ? route.path : `${route.path}/`;
+	return `https://beringungszange.de${path}`;
+});
+
+// Only the home and product pages are indexable and carry Product/FAQ structured data.
+const isIndexable = computed(() => ['index', 'adressringzange'].includes(routeBaseName.value));
 
 useSeoMeta({
-	title: setSeoTitle(route.path),
-	description: setSeoDescription(route.path),
-	ogTitle: setSeoTitle(route.path),
-	ogDescription: setSeoDescription(route.path),
+	title: () => setSeoTitle(),
+	description: () => setSeoDescription(),
+	ogTitle: () => setSeoTitle(),
+	ogDescription: () => setSeoDescription(),
 	ogImage: imageSrc,
 	ogType: 'website',
-	ogLocale: locale.value,
-	ogLocaleAlternate: locale,
 	ogUrl: canonicalUrl,
 	ogSiteName: 'beringungszange.de',
 	twitterCard: 'summary_large_image',
 	twitterImage: 'https://abriumbi.sirv.com/volker-vogelringzange/bg-desktop.webp',
-	robots: route.name?.toString().includes('index') || route.name?.toString().includes('adressringzange') ? 'index, follow' : 'noindex, nofollow',
+	robots: () => (isIndexable.value ? 'index, follow' : 'noindex, nofollow'),
 });
 
-// Punkt 10: Explicit canonical link
-useHead({
+// Punkt 10: Explicit canonical link (reactive so it stays correct on client navigation).
+useHead(() => ({
 	link: [
 		{ rel: 'canonical', href: canonicalUrl.value },
 	],
-});
+}));
 
-// Punkt 5: Multilingual Structured Data + Punkt 8: FAQ Schema
+// LocalBusiness schema is site-wide.
 useHead({
 	script: [
-		{
-			type: 'application/ld+json',
-			innerHTML: JSON.stringify({
-				'@context': 'https://schema.org',
-				'@type': 'Product',
-				'name': t('seo.title'),
-				'description': t('seo.description'),
-				'brand': {
-					'@type': 'Brand',
-					'name': 'Volker Jüngling',
-				},
-				'offers': {
-					'@type': 'Offer',
-					'price': '140',
-					'priceCurrency': 'EUR',
-					'availability': 'https://schema.org/InStock',
-					'seller': {
-						'@type': 'Person',
-						'name': 'Volker Jüngling',
-						'address': {
-							'@type': 'PostalAddress',
-							'streetAddress': 'Vormbrockweg 1c',
-							'addressLocality': 'Dortmund',
-							'postalCode': '44149',
-							'addressCountry': 'DE',
-						},
-					},
-				},
-				'image': 'https://beringungszange.de/Beringungszange.png',
-				'url': canonicalUrl.value,
-				'countryOfOrigin': {
-					'@type': 'Country',
-					'name': 'Germany',
-				},
-				'manufacturer': {
-					'@type': 'Person',
-					'name': 'Volker Jüngling',
-				},
-			}),
-		},
 		{
 			type: 'application/ld+json',
 			innerHTML: JSON.stringify({
@@ -272,40 +255,92 @@ useHead({
 				},
 			}),
 		},
-		{
-			type: 'application/ld+json',
-			innerHTML: JSON.stringify({
-				'@context': 'https://schema.org',
-				'@type': 'FAQPage',
-				'mainEntity': [
-					{
-						'@type': 'Question',
-						'name': t('faq.q1'),
-						'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a1') },
-					},
-					{
-						'@type': 'Question',
-						'name': t('faq.q2'),
-						'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a2') },
-					},
-					{
-						'@type': 'Question',
-						'name': t('faq.q3'),
-						'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a3') },
-					},
-					{
-						'@type': 'Question',
-						'name': t('faq.q4'),
-						'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a4') },
-					},
-					{
-						'@type': 'Question',
-						'name': t('faq.q5'),
-						'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a5') },
-					},
-				],
-			}),
-		},
 	],
 });
+
+// Punkt 5: Product structured data + Punkt 8: FAQ Schema – only on the home and product pages.
+useHead(() => ({
+	script: isIndexable.value
+		? [
+				{
+					type: 'application/ld+json',
+					key: 'ld-product',
+					innerHTML: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'Product',
+						'name': setSeoTitle(),
+						'description': setSeoDescription(),
+						'brand': {
+							'@type': 'Brand',
+							'name': 'Volker Jüngling',
+						},
+						'offers': {
+							'@type': 'Offer',
+							'price': '140',
+							'priceCurrency': 'EUR',
+							'priceValidUntil': '2027-12-31',
+							'availability': 'https://schema.org/InStock',
+							'url': canonicalUrl.value,
+							'seller': {
+								'@type': 'Person',
+								'name': 'Volker Jüngling',
+								'address': {
+									'@type': 'PostalAddress',
+									'streetAddress': 'Vormbrockweg 1c',
+									'addressLocality': 'Dortmund',
+									'postalCode': '44149',
+									'addressCountry': 'DE',
+								},
+							},
+						},
+						'image': 'https://beringungszange.de/Beringungszange.png',
+						'url': canonicalUrl.value,
+						'countryOfOrigin': {
+							'@type': 'Country',
+							'name': 'Germany',
+						},
+						'manufacturer': {
+							'@type': 'Person',
+							'name': 'Volker Jüngling',
+						},
+					}),
+				},
+				{
+					type: 'application/ld+json',
+					key: 'ld-faq',
+					innerHTML: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'FAQPage',
+						'mainEntity': [
+							{
+								'@type': 'Question',
+								'name': t('faq.q1'),
+								'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a1') },
+							},
+							{
+								'@type': 'Question',
+								'name': t('faq.q2'),
+								'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a2') },
+							},
+							{
+								'@type': 'Question',
+								'name': t('faq.q3'),
+								'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a3') },
+							},
+							{
+								'@type': 'Question',
+								'name': t('faq.q4'),
+								'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a4') },
+							},
+							{
+								'@type': 'Question',
+								'name': t('faq.q5'),
+								'acceptedAnswer': { '@type': 'Answer', 'text': t('faq.a5') },
+							},
+						],
+					}),
+				},
+			]
+		: [],
+}));
 </script>

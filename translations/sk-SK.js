@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Zásady ochrany osobných údajov pre beringungszange.de. Informácie o spracovaní údajov, cookies a vašich právach podľa GDPR.',
 	},
 	alt: {
+		gallery: 'Fotogaléria krúžkovacích klieští pri používaní',
 		productImage: 'Kliešte na krúžkovanie vtákov pre adresné krúžky - ručne vyrobené v Nemecku',
 		ringSizesImage: 'Kliešte na krúžkovanie s dvoma veľkosťami krúžkov na kameni so sokolníckym vybavením',
 		noDamageImage: 'Adresný krúžok zatvára sa bez poškodenia číslic',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Prijať iba nevyhnutné cookies',
 	},
 	adressringzangeView: {
+		heroTitle: 'Krúžkovacie kliešte na dve veľkosti krúžkov – ručne vyrobené v Nemecku',
 		headerPriceSection: 'Kvalitné kliešte na krúžkovanie',
 		iconBoxTitle: 'Kliešte na krúžkovanie sú optimálnym riešením pre vaše krúžkovanie vtákov!',
 		iconBox: {

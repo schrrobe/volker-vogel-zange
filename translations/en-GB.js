@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Privacy policy for beringungszange.de. Information about data processing, cookies, and your rights under GDPR.',
 	},
 	alt: {
+		gallery: 'Photo gallery of the banding pliers in use',
 		productImage: 'Bird banding pliers for address rings - handcrafted in Germany',
 		ringSizesImage: 'Banding pliers with two ring sizes on a stone with falconry equipment',
 		noDamageImage: 'Address ring being closed without damage to the digits',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Accept essential cookies only',
 	},
 	adressringzangeView: {
+		heroTitle: 'Address ring pliers for two ring sizes – handmade in Germany',
 		headerPriceSection: 'High-Quality Address Ring Pliers',
 		iconBoxTitle: 'The Address Ring Pliers are the optimal solution for your bird ringing!',
 		iconBox: {

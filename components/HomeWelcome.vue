@@ -1,5 +1,8 @@
 <template>
-	<section class="py-12 md:py-20 bg-muted/50" aria-labelledby="features-heading">
+	<section
+		class="py-12 md:py-20 bg-muted/50"
+		aria-labelledby="features-heading"
+	>
 		<div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
 			<h2
 				id="features-heading"
@@ -17,7 +20,10 @@
 				>
 					<CardHeader class="pb-2">
 						<div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-3">
-							<span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">{{ iconBox.icon }}</span>
+							<span
+								class="material-symbols-outlined text-primary text-3xl"
+								aria-hidden="true"
+							>{{ iconBox.icon }}</span>
 						</div>
 					</CardHeader>
 					<CardContent>
@@ -39,9 +45,14 @@
 						loop
 						controls
 						preload="metadata"
+						poster="/vogelringzange.jpeg"
 						:aria-label="$t('alt.videoManufacturing')"
 					>
-						<source src="/fertigung.mov" type="video/mp4">
+						<!-- NOTE: .mov (QuickTime) plays reliably only in Safari. To fix cross-browser playback, transcode to H.264 MP4 + WebM, add them to /public and place matching <source> tags (video/mp4, video/webm) BEFORE this one so browsers pick a playable encoding. -->
+						<source
+							src="/fertigung.mov"
+							type="video/quicktime"
+						>
 						<track
 							kind="descriptions"
 							:label="$t('alt.videoManufacturing')"
@@ -62,6 +73,6 @@ import { Card, CardHeader, CardContent } from '~/components/ui/card';
 import { Separator } from '~/components/ui/separator';
 
 defineProps<{
-	iconBoxes: Array<{ icon: string; text: string }>
+	iconBoxes: Array<{ icon: string; text: string }>;
 }>();
 </script>

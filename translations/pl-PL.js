@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Polityka prywatności beringungszange.de. Informacje o przetwarzaniu danych, plikach cookie i Twoich prawach wynikających z RODO.',
 	},
 	alt: {
+		gallery: 'Galeria zdjęć szczypiec do obrączkowania w użyciu',
 		productImage: 'Szczypce do obrączkowania ptaków dla obrączek adresowych - ręcznie wykonane w Niemczech',
 		ringSizesImage: 'Szczypce do obrączkowania z dwoma rozmiarami obrączek na kamieniu z wyposażeniem sokolniczym',
 		noDamageImage: 'Obrączka adresowa zamykana bez uszkodzenia cyfr',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Akceptuj tylko niezbędne pliki cookie',
 	},
 	adressringzangeView: {
+		heroTitle: 'Szczypce do obrączek adresowych na dwa rozmiary – ręcznie wykonane w Niemczech',
 		headerPriceSection: 'Wysokiej jakości szczypce do obrączkowania',
 		iconBoxTitle: 'Szczypce do obrączkowania to optymalne rozwiązanie dla Twojego obrączkowania ptaków!',
 		iconBox: {

@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'beringungszange.deのプライバシーポリシー。データ処理、クッキー、GDPRに基づくお客様の権利に関する情報。',
 	},
 	alt: {
+		gallery: '使用中のバンディングプライヤーのフォトギャラリー',
 		productImage: 'アドレスリング用鳥類バンディングプライヤー - ドイツ手作り',
 		ringSizesImage: '鷹狩り用具と共に石の上に置かれた二つのリングサイズ対応バンディングプライヤー',
 		noDamageImage: '数字を損傷せずに閉じられるアドレスリング',
@@ -83,6 +84,7 @@ export default {
 		buttonSecond: '必要なクッキーのみを受け入れる',
 	},
 	adressringzangeView: {
+		heroTitle: '2つのリングサイズに対応する住所リングプライヤー ― ドイツ製ハンドメイド',
 		headerPriceSection: '高品質なアドレスリングプライヤー',
 		iconBoxTitle: 'アドレスリングプライヤーは鳥類のリング装着に最適なソリューションです！',
 		iconBox: {

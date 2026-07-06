@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Politique de confidentialité de beringungszange.de. Informations sur le traitement des données, les cookies et vos droits en vertu du RGPD.',
 	},
 	alt: {
+		gallery: 'Galerie photo de la pince de baguage en action',
 		productImage: 'Pinces de baguage d\'oiseaux pour anneaux d\'adresse - fabriquées à la main en Allemagne',
 		ringSizesImage: 'Pinces de baguage avec deux tailles d\'anneaux sur une pierre avec équipement de fauconnerie',
 		noDamageImage: 'Anneau d\'adresse fermé sans endommager les chiffres',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Accepter uniquement les cookies essentiels',
 	},
 	adressringzangeView: {
+		heroTitle: 'Pince à bagues d\'adresse pour deux tailles de bague – fabriquée à la main en Allemagne',
 		headerPriceSection: 'Pince de baguage de haute qualité',
 		iconBoxTitle: 'La pince de baguage est la solution optimale pour le baguage de vos oiseaux !',
 		iconBox: {

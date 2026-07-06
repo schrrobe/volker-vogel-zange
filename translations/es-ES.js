@@ -42,6 +42,7 @@ export default {
 		dsgvoDescription: 'Política de privacidad de beringungszange.de. Información sobre el procesamiento de datos, cookies y sus derechos según el RGPD.',
 	},
 	alt: {
+		gallery: 'Galería de fotos del alicate de anillado en uso',
 		productImage: 'Alicates de anillamiento de aves para anillos de dirección - hechos a mano en Alemania',
 		ringSizesImage: 'Alicates de anillamiento con dos tamaños de anillo sobre una piedra con equipo de cetrería',
 		noDamageImage: 'Anillo de dirección cerrado sin dañar los dígitos',
@@ -103,6 +104,7 @@ export default {
 		buttonSecond: 'Aceptar solo cookies esenciales',
 	},
 	adressringzangeView: {
+		heroTitle: 'Alicate para anillas de dirección para dos tamaños de anilla – hecho a mano en Alemania',
 		headerPriceSection: 'Alicate de anillado de alta calidad',
 		iconBoxTitle: '¡El alicate de anillado es la solución óptima para el anillado de sus aves!',
 		iconBox: {
