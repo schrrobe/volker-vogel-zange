@@ -53,6 +53,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				display: ['Fraunces', 'Georgia', 'serif'],
 			},
 			maxWidth: {
 				'content': '1400px',

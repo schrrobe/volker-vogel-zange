@@ -19,6 +19,7 @@
 				{{ $t('homeView.benefitsIntro') }}
 			</template>
 		</MoreBenefits>
+		<CtaBand />
 		<FotoGallery />
 	</div>
 </template>
@@ -29,14 +30,14 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
 const iconBoxes = [
-	{ icon: 'plumbing', text: t('homeView.iconBox.ringSize') },
+	{ icon: 'adjust', text: t('homeView.iconBox.ringSize') },
 	{ icon: 'verified', text: t('homeView.iconBox.ringDestruction') },
-	{ icon: 'thumb_up', text: t('homeView.iconBox.easyHandling') },
+	{ icon: 'pan_tool', text: t('homeView.iconBox.easyHandling') },
 	{ icon: 'handyman', text: t('homeView.iconBox.quality') },
 ];
 
 const iconBoxesMoreBenefits = [
-	{ icon: 'trip_origin', title: t('homeView.flexibilityTitle'), text: t('homeView.flexibilityText') },
-	{ icon: 'done', title: t('homeView.durabilityTitle'), text: t('homeView.durabilityText') },
+	{ icon: 'tune', title: t('homeView.flexibilityTitle'), text: t('homeView.flexibilityText') },
+	{ icon: 'shield', title: t('homeView.durabilityTitle'), text: t('homeView.durabilityText') },
 ];
 </script>

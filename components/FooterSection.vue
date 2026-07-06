@@ -97,7 +97,7 @@
 				<template v-for="(lang, index) in langs" :key="lang.locale">
 					<NuxtLink
 						:to="switchLocalePath(lang.locale)"
-						class="text-xs text-gray-500 hover:text-white transition-colors px-1"
+						class="text-xs text-gray-400 hover:text-white transition-colors px-2 py-1"
 						:aria-label="'Switch to ' + lang.text"
 					>
 						{{ lang.text }}
@@ -110,7 +110,7 @@
 				</template>
 			</nav>
 
-			<p class="text-center text-gray-600 text-xs mt-6">
+			<p class="text-center text-gray-400 text-xs mt-6">
 				&copy; {{ new Date().getFullYear() }}
 				<a
 					href="https://prestige-webdesign.de/"

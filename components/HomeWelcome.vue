@@ -29,7 +29,7 @@
 			</div>
 
 			<!-- Punkt 7: Manufacturing Video with transcript -->
-			<div class="mt-12 lg:hidden">
+			<div class="mt-12 max-w-2xl mx-auto">
 				<figure>
 					<video
 						class="w-full rounded-xl shadow-lg"

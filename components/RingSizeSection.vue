@@ -7,12 +7,12 @@
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 					<div class="space-y-4">
 						<div class="flex items-center gap-3">
-							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">plumbing</span>
+							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">adjust</span>
 							<h3 class="text-xl md:text-2xl font-bold text-white">
 								{{ $t('homeView.ringSizeTitle') }}
 							</h3>
 						</div>
-						<Separator class="w-20 h-0.5 bg-white/40" />
+						<Separator class="w-20 h-0.5 bg-[#B08D57]/80" />
 						<p class="text-white/90 text-base leading-relaxed">
 							{{ $t('homeView.ringSizeText') }}
 						</p>
@@ -52,7 +52,7 @@
 								{{ $t('homeView.ringDestructionTitle') }}
 							</h3>
 						</div>
-						<Separator class="w-20 h-0.5 bg-white/40" />
+						<Separator class="w-20 h-0.5 bg-[#B08D57]/80" />
 						<p class="text-white/90 text-base leading-relaxed">
 							{{ $t('homeView.ringDestructionText') }}
 						</p>
@@ -63,12 +63,12 @@
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 					<div class="space-y-4">
 						<div class="flex items-center gap-3">
-							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">thumb_up</span>
+							<span class="material-symbols-outlined text-white text-2xl" aria-hidden="true">pan_tool</span>
 							<h3 class="text-xl md:text-2xl font-bold text-white">
 								{{ $t('homeView.easyHandlingTitle') }}
 							</h3>
 						</div>
-						<Separator class="w-20 h-0.5 bg-white/40" />
+						<Separator class="w-20 h-0.5 bg-[#B08D57]/80" />
 						<p class="text-white/90 text-base leading-relaxed">
 							{{ $t('homeView.easyHandlingText') }}
 						</p>
@@ -108,7 +108,7 @@
 								{{ $t('homeView.qualityTitle') }}
 							</h3>
 						</div>
-						<Separator class="w-20 h-0.5 bg-white/40" />
+						<Separator class="w-20 h-0.5 bg-[#B08D57]/80" />
 						<p class="text-white/90 text-base leading-relaxed">
 							{{ $t('homeView.qualityText') }}
 						</p>
